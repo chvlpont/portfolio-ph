@@ -83,20 +83,6 @@ const Portfolio = () => {
             <div className="flex items-center justify-between">
               <StockholmClock />
               <div className="flex items-center gap-6">
-                <Link
-                  href="/"
-                  className="hover:text-gray-300 transition-colors flex items-center gap-2"
-                >
-                  <Home size={18} />
-                  <span className="hidden md:inline">Home</span>
-                </Link>
-                <Link
-                  href="/projects"
-                  className="hover:text-gray-300 transition-colors flex items-center gap-2"
-                >
-                  <FolderGit2 size={18} />
-                  <span className="hidden md:inline">Projects</span>
-                </Link>
                 <a
                   href="/resume.pdf"
                   className="hover:text-gray-300 transition-colors flex items-center gap-2"
@@ -107,22 +93,13 @@ const Portfolio = () => {
                   <span className="hidden md:inline">Resume</span>
                 </a>
                 <a
-                  href="https://github.com/yourusername"
-                  className="hover:text-gray-300 transition-colors"
+                  href="https://github.com/chvlpont"
+                  className="hover:text-gray-300 transition-colors flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="Follow me on Github!"
                 >
                   <Github size={20} />
-                </a>
-                <a
-                  href="https://gitlab.com/yourusername"
-                  className="hover:text-gray-300 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Follow me on Gitlab!"
-                >
-                  <Gitlab size={20} />
+                  <span className="hidden md:inline">GitHub</span>
                 </a>
               </div>
             </div>
