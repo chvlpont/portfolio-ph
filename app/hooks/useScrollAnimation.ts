@@ -22,7 +22,7 @@ export const useScrollAnimation = () => {
       }
     );
 
-    // Observe all sections except the first one
+    // Observe all sections except the first one.
     const sections = document.querySelectorAll("section");
     sections.forEach((section, index) => {
       if (index > 0) {
