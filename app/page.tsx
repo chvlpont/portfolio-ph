@@ -66,7 +66,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-zinc-900 text-white">
+    <div className="min-h-screen bg-[#010409] text-white">
       <ParticleBackground />
       <div className="relative z-10">
         {/* Skip to main content */}
@@ -148,7 +148,7 @@ const Portfolio = () => {
 
               {/* Right side - Profile Image */}
               <div className="flex-1 flex justify-center md:justify-end">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-zinc-800 overflow-hidden">
+                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-[#161b22] overflow-hidden">
                   <img
                     src="https://media.licdn.com/dms/image/v2/D4D03AQGMiTPLTp2Yog/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709338866147?e=1764806400&v=beta&t=NGiGgY3l82efPdeFOftUqvtNNTU2WEH5RS6ZlTGdppc"
                     alt="Profile"
@@ -766,7 +766,7 @@ const Portfolio = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
+                      className="w-full px-4 py-3 bg-[#161b22] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
                       placeholder="Your name"
                     />
                   </div>
@@ -783,7 +783,7 @@ const Portfolio = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
+                      className="w-full px-4 py-3 bg-[#161b22] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -800,7 +800,7 @@ const Portfolio = () => {
                       name="message"
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500 resize-none"
+                      className="w-full px-4 py-3 bg-[#161b22] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500 resize-none"
                       placeholder="Your message..."
                     ></textarea>
                   </div>
