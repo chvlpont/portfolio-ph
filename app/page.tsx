@@ -124,7 +124,7 @@ const Portfolio = () => {
                     HI
                     <br />
                     I'M{" "}
-                    <span style={{ color: "#26a641", whiteSpace: "nowrap" }}>
+                    <span style={{ color: "#32CD30", whiteSpace: "nowrap" }}>
                       PONTUS HOGLER
                     </span>
                     <br />
@@ -135,6 +135,8 @@ const Portfolio = () => {
                         "Problem Solver",
                         2000,
                         "Builder",
+                        2000,
+                        "Web Developer",
                         2000,
                       ]}
                       wrapper="span"
