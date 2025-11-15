@@ -448,14 +448,38 @@ const Portfolio = () => {
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
-              {skills.map((skill) => (
+              {skills.map((skill, index) => (
                 <div
                   key={skill.name}
-                  className={`group relative border border-white/10 rounded-lg p-4 hover:border-white/30 transition-all duration-300 hover:shadow-lg hover:shadow-${skill.color}/10 hover:-translate-y-1 bg-gradient-to-br from-${skill.color}/5 to-transparent`}
+                  className="group relative skill-card"
+                  style={{
+                    animationDelay: `${index * 0.05}s`,
+                  }}
                 >
-                  <div className="flex flex-col items-center gap-2">
-                    <div className="text-3xl">{skill.icon}</div>
-                    <span className="text-sm font-medium">{skill.name}</span>
+                  {/* Gradient border effect */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  {/* Glow effect */}
+                  <div
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
+                    style={{
+                      background: `radial-gradient(circle at center, var(--tw-gradient-stops))`,
+                    }}
+                  ></div>
+
+                  {/* Card content */}
+                  <div className="relative border border-white/10 rounded-xl p-5 bg-zinc-800/50 backdrop-blur-sm group-hover:border-white/30 group-hover:bg-zinc-800/80 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
+                        {skill.icon}
+                      </div>
+                      <span className="text-sm font-semibold group-hover:text-white transition-colors">
+                        {skill.name}
+                      </span>
+
+                      {/* Animated underline */}
+                      <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-transparent via-white to-transparent transition-all duration-300"></div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -464,174 +488,192 @@ const Portfolio = () => {
 
           {/* Experience Section with Timeline */}
           <section className="relative mt-24 py-24">
-            <h2 className="text-3xl font-bold mb-12">Experience</h2>
+            <h2 className="text-3xl font-bold mb-8">Experience</h2>
+            <p className="text-xl text-gray-300 mb-12">
+              My journey in tech
+            </p>
 
             {/* Timeline Line - Hidden on mobile */}
-            <div className="hidden lg:block absolute left-0 top-16 bottom-0 w-px bg-white/20"></div>
+            <div className="hidden lg:block absolute left-0 top-32 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-purple-500 to-green-500"></div>
 
-            <div className="space-y-12">
+            <div className="space-y-8">
               {/* Experience 1 */}
               <div className="relative lg:pl-12">
                 {/* Timeline Dot */}
-                <div className="hidden lg:block absolute left-0 top-2 w-3 h-3 rounded-full bg-white -translate-x-[5px]"></div>
+                <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-cyan-500 -translate-x-[7px] shadow-lg shadow-cyan-500/50 animate-pulse"></div>
 
-                <div className="border border-white/20 rounded-lg p-6 hover:border-white/40 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold">
-                        Senior Software Engineer
-                      </h3>
-                      <p className="text-gray-400">Tech Company Name</p>
+                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative p-8 md:p-10">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors">
+                          Senior Software Engineer
+                        </h3>
+                        <p className="text-gray-400 text-lg mt-1">Tech Company Name</p>
+                      </div>
+                      <div className="mt-2 md:mt-0 px-4 py-2 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm font-medium">
+                        2022 - Present
+                      </div>
                     </div>
-                    <div className="text-gray-400 mt-2 md:mt-0">
-                      2022 - Present
+
+                    <ul className="space-y-3 mb-6 text-gray-300">
+                      <li className="flex items-start gap-2">
+                        <span className="text-cyan-400 mt-1">▹</span>
+                        <span>Architected and deployed microservices that reduced system latency by 40%</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-cyan-400 mt-1">▹</span>
+                        <span>Led a team of 5 engineers to deliver a customer-facing dashboard with 2x faster load times</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-cyan-400 mt-1">▹</span>
+                        <span>Implemented CI/CD pipelines that decreased deployment time by 60%</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-cyan-400 mt-1">▹</span>
+                        <span>Mentored junior developers and conducted code reviews to maintain high code quality</span>
+                      </li>
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
+                        React
+                      </span>
+                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
+                        TypeScript
+                      </span>
+                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
+                        Node.js
+                      </span>
+                      <span className="px-3 py-1.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-lg text-xs font-medium">
+                        AWS
+                      </span>
+                      <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-medium">
+                        Docker
+                      </span>
                     </div>
-                  </div>
-
-                  <ul className="space-y-2 mb-4 text-gray-300">
-                    <li>
-                      • Architected and deployed microservices that reduced
-                      system latency by 40%
-                    </li>
-                    <li>
-                      • Led a team of 5 engineers to deliver a customer-facing
-                      dashboard with 2x faster load times
-                    </li>
-                    <li>
-                      • Implemented CI/CD pipelines that decreased deployment
-                      time by 60%
-                    </li>
-                    <li>
-                      • Mentored junior developers and conducted code reviews to
-                      maintain high code quality
-                    </li>
-                  </ul>
-
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      React
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      TypeScript
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Node.js
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      AWS
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Docker
-                    </span>
                   </div>
                 </div>
               </div>
 
               {/* Experience 2 */}
               <div className="relative lg:pl-12">
-                <div className="hidden lg:block absolute left-0 top-2 w-3 h-3 rounded-full bg-white -translate-x-[5px]"></div>
+                <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-purple-500 -translate-x-[7px] shadow-lg shadow-purple-500/50"></div>
 
-                <div className="border border-white/20 rounded-lg p-6 hover:border-white/40 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold">
-                        Full Stack Developer
-                      </h3>
-                      <p className="text-gray-400">Startup Inc.</p>
+                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative p-8 md:p-10">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors">
+                          Full Stack Developer
+                        </h3>
+                        <p className="text-gray-400 text-lg mt-1">Startup Inc.</p>
+                      </div>
+                      <div className="mt-2 md:mt-0 px-4 py-2 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-sm font-medium">
+                        2020 - 2022
+                      </div>
                     </div>
-                    <div className="text-gray-400 mt-2 md:mt-0">
-                      2020 - 2022
+
+                    <ul className="space-y-3 mb-6 text-gray-300">
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-400 mt-1">▹</span>
+                        <span>Built a mobile-first web application that improved user engagement by 60%</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-400 mt-1">▹</span>
+                        <span>Optimized database queries resulting in 3x faster response times</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-400 mt-1">▹</span>
+                        <span>Integrated third-party APIs and payment gateways for seamless transactions</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-purple-400 mt-1">▹</span>
+                        <span>Collaborated with designers to create pixel-perfect, responsive interfaces</span>
+                      </li>
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
+                        Vue.js
+                      </span>
+                      <span className="px-3 py-1.5 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded-lg text-xs font-medium">
+                        Python
+                      </span>
+                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
+                        Django
+                      </span>
+                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
+                        PostgreSQL
+                      </span>
+                      <span className="px-3 py-1.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg text-xs font-medium">
+                        Redis
+                      </span>
                     </div>
-                  </div>
-
-                  <ul className="space-y-2 mb-4 text-gray-300">
-                    <li>
-                      • Built a mobile-first web application that improved user
-                      engagement by 60%
-                    </li>
-                    <li>
-                      • Optimized database queries resulting in 3x faster
-                      response times
-                    </li>
-                    <li>
-                      • Integrated third-party APIs and payment gateways for
-                      seamless transactions
-                    </li>
-                    <li>
-                      • Collaborated with designers to create pixel-perfect,
-                      responsive interfaces
-                    </li>
-                  </ul>
-
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Vue.js
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Python
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Django
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      PostgreSQL
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Redis
-                    </span>
                   </div>
                 </div>
               </div>
 
               {/* Experience 3 */}
               <div className="relative lg:pl-12">
-                <div className="hidden lg:block absolute left-0 top-2 w-3 h-3 rounded-full bg-white -translate-x-[5px]"></div>
+                <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-green-500 -translate-x-[7px] shadow-lg shadow-green-500/50"></div>
 
-                <div className="border border-white/20 rounded-lg p-6 hover:border-white/40 transition-colors">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold">Junior Developer</h3>
-                      <p className="text-gray-400">Software Solutions Ltd.</p>
+                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  <div className="relative p-8 md:p-10">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                      <div>
+                        <h3 className="text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors">
+                          Junior Developer
+                        </h3>
+                        <p className="text-gray-400 text-lg mt-1">Software Solutions Ltd.</p>
+                      </div>
+                      <div className="mt-2 md:mt-0 px-4 py-2 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-sm font-medium">
+                        2018 - 2020
+                      </div>
                     </div>
-                    <div className="text-gray-400 mt-2 md:mt-0">
-                      2018 - 2020
+
+                    <ul className="space-y-3 mb-6 text-gray-300">
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-400 mt-1">▹</span>
+                        <span>Developed and maintained client-facing web applications</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-400 mt-1">▹</span>
+                        <span>Implemented automated testing that reduced bugs in production by 45%</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-400 mt-1">▹</span>
+                        <span>Participated in agile ceremonies and contributed to sprint planning</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-green-400 mt-1">▹</span>
+                        <span>Refactored legacy code to improve maintainability and performance</span>
+                      </li>
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1.5 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded-lg text-xs font-medium">
+                        JavaScript
+                      </span>
+                      <span className="px-3 py-1.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg text-xs font-medium">
+                        Angular
+                      </span>
+                      <span className="px-3 py-1.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded-lg text-xs font-medium">
+                        Java
+                      </span>
+                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
+                        Spring Boot
+                      </span>
+                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
+                        MySQL
+                      </span>
                     </div>
-                  </div>
-
-                  <ul className="space-y-2 mb-4 text-gray-300">
-                    <li>
-                      • Developed and maintained client-facing web applications
-                    </li>
-                    <li>
-                      • Implemented automated testing that reduced bugs in
-                      production by 45%
-                    </li>
-                    <li>
-                      • Participated in agile ceremonies and contributed to
-                      sprint planning
-                    </li>
-                    <li>
-                      • Refactored legacy code to improve maintainability and
-                      performance
-                    </li>
-                  </ul>
-
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      JavaScript
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Angular
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Java
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      Spring Boot
-                    </span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full text-sm">
-                      MySQL
-                    </span>
                   </div>
                 </div>
               </div>
