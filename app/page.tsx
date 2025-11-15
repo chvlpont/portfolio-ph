@@ -135,7 +135,10 @@ const Portfolio = () => {
                   >
                     HI
                     <br />
-                    I'M <span style={{ color: "#26a641" }}>PONTUS HOGLER</span>
+                    I'M{" "}
+                    <span style={{ color: "#26a641", whiteSpace: "nowrap" }}>
+                      PONTUS HOGLER
+                    </span>
                     <br />
                     <TypeAnimation
                       sequence={[
