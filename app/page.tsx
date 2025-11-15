@@ -28,6 +28,17 @@ if (typeof window !== "undefined") {
 
 const Portfolio = () => {
   useScrollAnimation();
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const skills = [
     { name: "HTML", icon: "🌐", color: "#f97316" },
@@ -199,22 +210,28 @@ const Portfolio = () => {
                   </a>
                 </div>
 
-                <div className="w-full overflow-x-auto pb-4">
-                  <GitHubCalendar
-                    username="chvlpont"
-                    colorScheme="dark"
-                    blockSize={18}
-                    fontSize={16}
-                    theme={{
-                      dark: [
-                        "#161b22",
-                        "#0e4429",
-                        "#006d32",
-                        "#26a641",
-                        "#39d353",
-                      ],
-                    }}
-                  />
+                <div className="w-full overflow-hidden flex justify-center">
+                  <div
+                    className={`${
+                      isMobile ? "scale-[0.35]" : "scale-[0.96]"
+                    } origin-top transition-transform`}
+                  >
+                    <GitHubCalendar
+                      username="chvlpont"
+                      colorScheme="dark"
+                      blockSize={18}
+                      fontSize={16}
+                      theme={{
+                        dark: [
+                          "#161b22",
+                          "#0e4429",
+                          "#006d32",
+                          "#26a641",
+                          "#39d353",
+                        ],
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
