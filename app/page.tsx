@@ -130,7 +130,7 @@ const Portfolio = () => {
                     className="block leading-relaxed"
                     style={{
                       fontFamily: '"Fira Code", monospace',
-                      fontSize: "40px",
+                      fontSize: "35px",
                     }}
                   >
                     HI
@@ -464,9 +464,7 @@ const Portfolio = () => {
                   }}
                 >
                   {/* Card content */}
-                  <div
-                    className="relative rounded-xl p-5 bg-gradient-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden"
-                  >
+                  <div className="relative rounded-xl p-5 bg-gradient-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden">
                     {/* Subtle background gradient */}
                     <div
                       className="absolute inset-0 pointer-events-none"
