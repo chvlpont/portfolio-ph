@@ -229,6 +229,7 @@ const Portfolio = () => {
             <div className="space-y-8">
               {/* Project 1 */}
               <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative p-8 md:p-10">
                   <div className="flex flex-col md:flex-row gap-8">
@@ -300,6 +301,7 @@ const Portfolio = () => {
 
               {/* Project 2 */}
               <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative p-8 md:p-10">
                   <div className="flex flex-col md:flex-row gap-8">
@@ -371,6 +373,7 @@ const Portfolio = () => {
 
               {/* Project 3 */}
               <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-green-500/5 pointer-events-none"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative p-8 md:p-10">
                   <div className="flex flex-col md:flex-row gap-8">
@@ -460,30 +463,27 @@ const Portfolio = () => {
                     animationDelay: `${index * 0.05}s`,
                   }}
                 >
-                  {/* Gradient border effect */}
-                  <div
-                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{
-                      background: `linear-gradient(135deg, ${skill.color}33, transparent, ${skill.color}0D)`,
-                    }}
-                  ></div>
-
-                  {/* Glow effect */}
-                  <div
-                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
-                    style={{
-                      background: `radial-gradient(circle at center, ${skill.color}66, transparent)`,
-                    }}
-                  ></div>
-
                   {/* Card content */}
                   <div
-                    className="relative rounded-xl p-5 bg-zinc-800/50 backdrop-blur-sm group-hover:bg-zinc-800/80 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl border"
-                    style={{
-                      borderColor: `${skill.color}4D`,
-                    }}
+                    className="relative rounded-xl p-5 bg-gradient-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden"
                   >
-                    <div className="flex flex-col items-center gap-3">
+                    {/* Subtle background gradient */}
+                    <div
+                      className="absolute inset-0 pointer-events-none"
+                      style={{
+                        background: `linear-gradient(135deg, ${skill.color}0D, transparent, ${skill.color}05)`,
+                      }}
+                    ></div>
+
+                    {/* Glow effect on hover */}
+                    <div
+                      className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl pointer-events-none"
+                      style={{
+                        background: `radial-gradient(circle at center, ${skill.color}66, transparent)`,
+                      }}
+                    ></div>
+
+                    <div className="relative flex flex-col items-center gap-3">
                       <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
                         {skill.icon}
                       </div>
@@ -522,6 +522,7 @@ const Portfolio = () => {
                 <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-cyan-500 -translate-x-[7px] shadow-lg shadow-cyan-500/50 animate-pulse"></div>
 
                 <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   <div className="relative p-8 md:p-10">
@@ -596,6 +597,7 @@ const Portfolio = () => {
                 <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-purple-500 -translate-x-[7px] shadow-lg shadow-purple-500/50"></div>
 
                 <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   <div className="relative p-8 md:p-10">
@@ -670,6 +672,7 @@ const Portfolio = () => {
                 <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-green-500 -translate-x-[7px] shadow-lg shadow-green-500/50"></div>
 
                 <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   <div className="relative p-8 md:p-10">
