@@ -219,7 +219,9 @@ const Portfolio = () => {
 
           {/* Projects Section */}
           <section className="mt-24">
-            <h2 className="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Featured Projects
+            </h2>
             <p className="text-xl text-gray-300 mb-12 text-center">
               Some things I've built recently
             </p>
@@ -442,7 +444,9 @@ const Portfolio = () => {
 
           {/* Skills Section */}
           <section className="mt-24">
-            <h2 className="text-3xl font-bold mb-8 text-center">The Secret Recipe</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              The Secret Recipe
+            </h2>
             <p className="text-xl text-gray-300 mb-12 text-center">
               Technologies and tools I use to bring ideas to life.
             </p>
@@ -460,7 +464,7 @@ const Portfolio = () => {
                   <div
                     className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
-                      background: `linear-gradient(135deg, ${skill.color}33, transparent, ${skill.color}0D)`
+                      background: `linear-gradient(135deg, ${skill.color}33, transparent, ${skill.color}0D)`,
                     }}
                   ></div>
 
@@ -483,9 +487,7 @@ const Portfolio = () => {
                       <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
                         {skill.icon}
                       </div>
-                      <span
-                        className="text-sm font-semibold transition-colors"
-                      >
+                      <span className="text-sm font-semibold transition-colors">
                         {skill.name}
                       </span>
 
@@ -493,7 +495,7 @@ const Portfolio = () => {
                       <div
                         className="h-0.5 w-0 group-hover:w-full transition-all duration-300"
                         style={{
-                          background: `linear-gradient(to right, transparent, ${skill.color}, transparent)`
+                          background: `linear-gradient(to right, transparent, ${skill.color}, transparent)`,
                         }}
                       ></div>
                     </div>
@@ -504,7 +506,7 @@ const Portfolio = () => {
           </section>
 
           {/* Experience Section with Timeline */}
-          <section className="relative mt-24 py-24">
+          <section className="relative mt-24">
             <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
             <p className="text-xl text-gray-300 mb-12 text-center">
               My journey in tech
@@ -528,7 +530,9 @@ const Portfolio = () => {
                         <h3 className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors">
                           Senior Software Engineer
                         </h3>
-                        <p className="text-gray-400 text-lg mt-1">Tech Company Name</p>
+                        <p className="text-gray-400 text-lg mt-1">
+                          Tech Company Name
+                        </p>
                       </div>
                       <div className="mt-2 md:mt-0 px-4 py-2 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm font-medium">
                         2022 - Present
@@ -538,19 +542,31 @@ const Portfolio = () => {
                     <ul className="space-y-3 mb-6 text-gray-300">
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
-                        <span>Architected and deployed microservices that reduced system latency by 40%</span>
+                        <span>
+                          Architected and deployed microservices that reduced
+                          system latency by 40%
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
-                        <span>Led a team of 5 engineers to deliver a customer-facing dashboard with 2x faster load times</span>
+                        <span>
+                          Led a team of 5 engineers to deliver a customer-facing
+                          dashboard with 2x faster load times
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
-                        <span>Implemented CI/CD pipelines that decreased deployment time by 60%</span>
+                        <span>
+                          Implemented CI/CD pipelines that decreased deployment
+                          time by 60%
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
-                        <span>Mentored junior developers and conducted code reviews to maintain high code quality</span>
+                        <span>
+                          Mentored junior developers and conducted code reviews
+                          to maintain high code quality
+                        </span>
                       </li>
                     </ul>
 
@@ -588,7 +604,9 @@ const Portfolio = () => {
                         <h3 className="text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors">
                           Full Stack Developer
                         </h3>
-                        <p className="text-gray-400 text-lg mt-1">Startup Inc.</p>
+                        <p className="text-gray-400 text-lg mt-1">
+                          Startup Inc.
+                        </p>
                       </div>
                       <div className="mt-2 md:mt-0 px-4 py-2 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-sm font-medium">
                         2020 - 2022
@@ -598,19 +616,31 @@ const Portfolio = () => {
                     <ul className="space-y-3 mb-6 text-gray-300">
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
-                        <span>Built a mobile-first web application that improved user engagement by 60%</span>
+                        <span>
+                          Built a mobile-first web application that improved
+                          user engagement by 60%
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
-                        <span>Optimized database queries resulting in 3x faster response times</span>
+                        <span>
+                          Optimized database queries resulting in 3x faster
+                          response times
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
-                        <span>Integrated third-party APIs and payment gateways for seamless transactions</span>
+                        <span>
+                          Integrated third-party APIs and payment gateways for
+                          seamless transactions
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
-                        <span>Collaborated with designers to create pixel-perfect, responsive interfaces</span>
+                        <span>
+                          Collaborated with designers to create pixel-perfect,
+                          responsive interfaces
+                        </span>
                       </li>
                     </ul>
 
@@ -648,7 +678,9 @@ const Portfolio = () => {
                         <h3 className="text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors">
                           Junior Developer
                         </h3>
-                        <p className="text-gray-400 text-lg mt-1">Software Solutions Ltd.</p>
+                        <p className="text-gray-400 text-lg mt-1">
+                          Software Solutions Ltd.
+                        </p>
                       </div>
                       <div className="mt-2 md:mt-0 px-4 py-2 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-sm font-medium">
                         2018 - 2020
@@ -658,19 +690,31 @@ const Portfolio = () => {
                     <ul className="space-y-3 mb-6 text-gray-300">
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
-                        <span>Developed and maintained client-facing web applications</span>
+                        <span>
+                          Developed and maintained client-facing web
+                          applications
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
-                        <span>Implemented automated testing that reduced bugs in production by 45%</span>
+                        <span>
+                          Implemented automated testing that reduced bugs in
+                          production by 45%
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
-                        <span>Participated in agile ceremonies and contributed to sprint planning</span>
+                        <span>
+                          Participated in agile ceremonies and contributed to
+                          sprint planning
+                        </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
-                        <span>Refactored legacy code to improve maintainability and performance</span>
+                        <span>
+                          Refactored legacy code to improve maintainability and
+                          performance
+                        </span>
                       </li>
                     </ul>
 
@@ -693,6 +737,118 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className="mt-24">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Get In Touch
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 text-center">
+              Have a question or want to work together?
+            </p>
+
+            <div className="max-w-2xl mx-auto">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent p-8 md:p-10">
+                {/* Background gradient effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
+
+                <form
+                  className="relative space-y-6"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    const form = e.target as HTMLFormElement;
+                    const formData = new FormData(form);
+
+                    const data = {
+                      name: formData.get("name"),
+                      email: formData.get("email"),
+                      message: formData.get("message"),
+                    };
+
+                    try {
+                      const response = await fetch("/api/contact", {
+                        method: "POST",
+                        headers: {
+                          "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(data),
+                      });
+
+                      if (response.ok) {
+                        alert(
+                          "Message sent successfully! I'll get back to you soon."
+                        );
+                        form.reset();
+                      } else {
+                        alert("Failed to send message. Please try again.");
+                      }
+                    } catch (error) {
+                      alert("Failed to send message. Please try again.");
+                    }
+                  }}
+                >
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2 text-gray-300"
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
+                      placeholder="Your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2 text-gray-300"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium mb-2 text-gray-300"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      className="w-full px-4 py-3 bg-zinc-800/50 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500 resize-none"
+                      placeholder="Your message..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2"
+                  >
+                    <Mail size={20} />
+                    Send Message
+                  </button>
+                </form>
               </div>
             </div>
           </section>
