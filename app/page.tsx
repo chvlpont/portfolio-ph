@@ -514,14 +514,11 @@ const Portfolio = () => {
             </p>
 
             {/* Timeline Line - Hidden on mobile */}
-            <div className="hidden lg:block absolute left-0 top-32 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-purple-500 to-green-500"></div>
+            <div className="hidden md:block absolute left-0 top-32 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-purple-500 to-green-500"></div>
 
             <div className="space-y-8">
-              {/* Experience 1 */}
-              <div className="relative lg:pl-12">
-                {/* Timeline Dot */}
-                <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-cyan-500 -translate-x-[7px] shadow-lg shadow-cyan-500/50 animate-pulse"></div>
-
+              {/* Experience 1 - Webbyro */}
+              <div className="relative md:pl-12">
                 <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -530,14 +527,14 @@ const Portfolio = () => {
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                       <div>
                         <h3 className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors">
-                          Senior Software Engineer
+                          Co-Founder & Fullstack Developer
                         </h3>
                         <p className="text-gray-400 text-lg mt-1">
-                          Tech Company Name
+                          Webbyro
                         </p>
                       </div>
                       <div className="mt-2 md:mt-0 px-4 py-2 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm font-medium">
-                        2022 - Present
+                        Aug 2024 - Present
                       </div>
                     </div>
 
@@ -545,58 +542,64 @@ const Portfolio = () => {
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
                         <span>
-                          Architected and deployed microservices that reduced
-                          system latency by 40%
+                          Co-founded and built Webbyro alongside my brother and a friend
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
                         <span>
-                          Led a team of 5 engineers to deliver a customer-facing
-                          dashboard with 2x faster load times
+                          Developed affordable websites for businesses using modern web technologies
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
                         <span>
-                          Implemented CI/CD pipelines that decreased deployment
-                          time by 60%
+                          Currently focusing on developing an AI product
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-cyan-400 mt-1">▹</span>
                         <span>
-                          Mentored junior developers and conducted code reviews
-                          to maintain high code quality
+                          Full-stack development with Next.js, TypeScript, and Supabase
                         </span>
                       </li>
                     </ul>
 
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
-                        React
+                      <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
+                        Next.js
                       </span>
                       <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
                         TypeScript
                       </span>
+                      <span className="px-3 py-1.5 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded-lg text-xs font-medium">
+                        JavaScript
+                      </span>
+                      <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
+                        Tailwind
+                      </span>
                       <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
-                        Node.js
+                        Supabase
+                      </span>
+                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
+                        PostgreSQL
                       </span>
                       <span className="px-3 py-1.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-lg text-xs font-medium">
-                        AWS
+                        Firebase
+                      </span>
+                      <span className="px-3 py-1.5 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-lg text-xs font-medium">
+                        WordPress
                       </span>
                       <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-medium">
-                        Docker
+                        SEO
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Experience 2 */}
-              <div className="relative lg:pl-12">
-                <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-purple-500 -translate-x-[7px] shadow-lg shadow-purple-500/50"></div>
-
+              {/* Experience 2 - Knowingly */}
+              <div className="relative md:pl-12">
                 <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -605,14 +608,14 @@ const Portfolio = () => {
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                       <div>
                         <h3 className="text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors">
-                          Full Stack Developer
+                          Full Stack Developer - Intern
                         </h3>
                         <p className="text-gray-400 text-lg mt-1">
-                          Startup Inc.
+                          Knowingly
                         </p>
                       </div>
                       <div className="mt-2 md:mt-0 px-4 py-2 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-sm font-medium">
-                        2020 - 2022
+                        Mar 2025 - Jun 2025
                       </div>
                     </div>
 
@@ -620,58 +623,55 @@ const Portfolio = () => {
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
                         <span>
-                          Built a mobile-first web application that improved
-                          user engagement by 60%
+                          Enhanced AI-powered community platform to improve user connections
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
                         <span>
-                          Optimized database queries resulting in 3x faster
-                          response times
+                          Implemented new features on both frontend and backend
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
                         <span>
-                          Integrated third-party APIs and payment gateways for
-                          seamless transactions
+                          Improved existing functionality and user experience
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-purple-400 mt-1">▹</span>
                         <span>
-                          Collaborated with designers to create pixel-perfect,
-                          responsive interfaces
+                          Full-stack development with TypeScript, Next.js, and PostgreSQL
                         </span>
                       </li>
                     </ul>
 
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
-                        Vue.js
+                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
+                        TypeScript
                       </span>
-                      <span className="px-3 py-1.5 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded-lg text-xs font-medium">
-                        Python
-                      </span>
-                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
-                        Django
+                      <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
+                        Next.js
                       </span>
                       <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
                         PostgreSQL
                       </span>
-                      <span className="px-3 py-1.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg text-xs font-medium">
-                        Redis
+                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
+                        Supabase
+                      </span>
+                      <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-medium">
+                        Prisma
+                      </span>
+                      <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
+                        Tailwind CSS
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Experience 3 */}
-              <div className="relative lg:pl-12">
-                <div className="hidden lg:block absolute left-0 top-6 w-4 h-4 rounded-full bg-green-500 -translate-x-[7px] shadow-lg shadow-green-500/50"></div>
-
+              {/* Experience 3 - Vobling */}
+              <div className="relative md:pl-12">
                 <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
                   <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -680,14 +680,14 @@ const Portfolio = () => {
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                       <div>
                         <h3 className="text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors">
-                          Junior Developer
+                          XR Developer - Intern
                         </h3>
                         <p className="text-gray-400 text-lg mt-1">
-                          Software Solutions Ltd.
+                          Vobling
                         </p>
                       </div>
                       <div className="mt-2 md:mt-0 px-4 py-2 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-sm font-medium">
-                        2018 - 2020
+                        Dec 2022 - May 2023
                       </div>
                     </div>
 
@@ -695,48 +695,44 @@ const Portfolio = () => {
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
                         <span>
-                          Developed and maintained client-facing web
-                          applications
+                          Developed VR Fire Trainer, a VR fire safety simulation application
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
                         <span>
-                          Implemented automated testing that reduced bugs in
-                          production by 45%
+                          Created realistic simulations and effects including smoke, fire, and burn marks
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
                         <span>
-                          Participated in agile ceremonies and contributed to
-                          sprint planning
+                          Implemented different types of fire extinguishers in the VR environment
                         </span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-green-400 mt-1">▹</span>
                         <span>
-                          Refactored legacy code to improve maintainability and
-                          performance
+                          Built 3D environments using Blender and developed gameplay mechanics with C# in Unity
                         </span>
                       </li>
                     </ul>
 
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1.5 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded-lg text-xs font-medium">
-                        JavaScript
+                      <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
+                        Unity
                       </span>
-                      <span className="px-3 py-1.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg text-xs font-medium">
-                        Angular
+                      <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-medium">
+                        C#
                       </span>
                       <span className="px-3 py-1.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded-lg text-xs font-medium">
-                        Java
+                        Blender
                       </span>
-                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
-                        Spring Boot
+                      <span className="px-3 py-1.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg text-xs font-medium">
+                        Adobe Substance Painter
                       </span>
                       <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                        MySQL
+                        Jira
                       </span>
                     </div>
                   </div>
