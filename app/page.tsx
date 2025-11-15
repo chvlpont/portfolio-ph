@@ -32,7 +32,7 @@ const Portfolio = () => {
 
   React.useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     checkMobile();
@@ -187,17 +187,37 @@ const Portfolio = () => {
                   </a>
                 </div>
 
-                <div className="w-full overflow-hidden flex justify-center">
-                  <div
-                    className={`${
-                      isMobile ? "scale-[0.35]" : "scale-[0.96]"
-                    } origin-top transition-transform`}
-                  >
+                <div
+                  className={`w-full flex justify-center ${
+                    isMobile
+                      ? "[&>article]:!max-w-full [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto"
+                      : ""
+                  }`}
+                >
+                  {!isMobile ? (
+                    <div className="scale-[0.96] origin-top transition-transform">
+                      <GitHubCalendar
+                        username="chvlpont"
+                        colorScheme="dark"
+                        blockSize={18}
+                        fontSize={16}
+                        theme={{
+                          dark: [
+                            "#161b22",
+                            "#0e4429",
+                            "#006d32",
+                            "#26a641",
+                            "#39d353",
+                          ],
+                        }}
+                      />
+                    </div>
+                  ) : (
                     <GitHubCalendar
                       username="chvlpont"
                       colorScheme="dark"
-                      blockSize={18}
-                      fontSize={16}
+                      blockSize={15}
+                      fontSize={14}
                       theme={{
                         dark: [
                           "#161b22",
@@ -208,7 +228,7 @@ const Portfolio = () => {
                         ],
                       }}
                     />
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
