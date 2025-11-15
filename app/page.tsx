@@ -513,9 +513,6 @@ const Portfolio = () => {
               My journey in tech
             </p>
 
-            {/* Timeline Line - Hidden on mobile */}
-            <div className="hidden md:block absolute left-0 top-32 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-purple-500 to-green-500"></div>
-
             <div className="space-y-8">
               {/* Experience 1 - Webbyro */}
               <div className="relative md:pl-12">
