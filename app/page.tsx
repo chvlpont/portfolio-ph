@@ -30,28 +30,28 @@ const Portfolio = () => {
   useScrollAnimation();
 
   const skills = [
-    { name: "HTML", icon: "🌐", color: "orange-500" },
-    { name: "CSS", icon: "🎨", color: "blue-500" },
-    { name: "JavaScript", icon: "⚡", color: "yellow-500" },
-    { name: "TypeScript", icon: "📘", color: "blue-400" },
-    { name: "React", icon: "⚛️", color: "cyan-500" },
-    { name: "C#", icon: "🔷", color: "purple-500" },
-    { name: "Next.js", icon: "▲", color: "gray-500" },
-    { name: "Node.js", icon: "🟢", color: "green-500" },
-    { name: "Git", icon: "🔀", color: "orange-600" },
-    { name: "Tailwind", icon: "🎐", color: "cyan-400" },
-    { name: "MongoDB", icon: "🍃", color: "green-600" },
-    { name: "Redux", icon: "🔄", color: "purple-600" },
-    { name: "Express", icon: "🚂", color: "gray-400" },
-    { name: "Framer Motion", icon: "🎬", color: "pink-500" },
-    { name: "Blender", icon: "🎲", color: "orange-400" },
-    { name: "Unity", icon: "🎮", color: "gray-300" },
-    { name: "WordPress", icon: "📝", color: "blue-600" },
-    { name: "Figma", icon: "🎨", color: "red-500" },
-    { name: "SCSS", icon: "💅", color: "pink-600" },
-    { name: "Firebase", icon: "🔥", color: "yellow-600" },
-    { name: "Clerk", icon: "🔐", color: "indigo-500" },
-    { name: "Context", icon: "🔗", color: "teal-500" },
+    { name: "HTML", icon: "🌐", color: "#f97316" },
+    { name: "CSS", icon: "🎨", color: "#3b82f6" },
+    { name: "JavaScript", icon: "⚡", color: "#eab308" },
+    { name: "TypeScript", icon: "📘", color: "#60a5fa" },
+    { name: "React", icon: "⚛️", color: "#06b6d4" },
+    { name: "C#", icon: "🔷", color: "#a855f7" },
+    { name: "Next.js", icon: "▲", color: "#6b7280" },
+    { name: "Node.js", icon: "🟢", color: "#22c55e" },
+    { name: "Git", icon: "🔀", color: "#ea580c" },
+    { name: "Tailwind", icon: "🎐", color: "#22d3ee" },
+    { name: "MongoDB", icon: "🍃", color: "#16a34a" },
+    { name: "Redux", icon: "🔄", color: "#9333ea" },
+    { name: "Express", icon: "🚂", color: "#9ca3af" },
+    { name: "Framer Motion", icon: "🎬", color: "#ec4899" },
+    { name: "Blender", icon: "🎲", color: "#fb923c" },
+    { name: "Unity", icon: "🎮", color: "#d1d5db" },
+    { name: "WordPress", icon: "📝", color: "#2563eb" },
+    { name: "Figma", icon: "🎨", color: "#ef4444" },
+    { name: "SCSS", icon: "💅", color: "#db2777" },
+    { name: "Firebase", icon: "🔥", color: "#ca8a04" },
+    { name: "Clerk", icon: "🔐", color: "#6366f1" },
+    { name: "Context", icon: "🔗", color: "#14b8a6" },
   ];
 
   return (
@@ -175,8 +175,8 @@ const Portfolio = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
 
               <div className="relative">
-                <div className="flex items-center justify-between mb-8">
-                  <div>
+                <div className="flex flex-col items-center mb-8">
+                  <div className="text-center mb-4">
                     <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
                     <p className="text-gray-400">My contributions in 2025</p>
                   </div>
@@ -219,8 +219,8 @@ const Portfolio = () => {
 
           {/* Projects Section */}
           <section className="mt-24">
-            <h2 className="text-3xl font-bold mb-8">Featured Projects</h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <h2 className="text-3xl font-bold mb-8 text-center">Featured Projects</h2>
+            <p className="text-xl text-gray-300 mb-12 text-center">
               Some things I've built recently
             </p>
 
@@ -442,8 +442,8 @@ const Portfolio = () => {
 
           {/* Skills Section */}
           <section className="mt-24">
-            <h2 className="text-3xl font-bold mb-8">The Secret Recipe</h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <h2 className="text-3xl font-bold mb-8 text-center">The Secret Recipe</h2>
+            <p className="text-xl text-gray-300 mb-12 text-center">
               Technologies and tools I use to bring ideas to life.
             </p>
 
@@ -457,28 +457,45 @@ const Portfolio = () => {
                   }}
                 >
                   {/* Gradient border effect */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background: `linear-gradient(135deg, ${skill.color}33, transparent, ${skill.color}0D)`
+                    }}
+                  ></div>
 
                   {/* Glow effect */}
                   <div
                     className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
                     style={{
-                      background: `radial-gradient(circle at center, var(--tw-gradient-stops))`,
+                      background: `radial-gradient(circle at center, ${skill.color}66, transparent)`,
                     }}
                   ></div>
 
                   {/* Card content */}
-                  <div className="relative border border-white/10 rounded-xl p-5 bg-zinc-800/50 backdrop-blur-sm group-hover:border-white/30 group-hover:bg-zinc-800/80 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl">
+                  <div
+                    className="relative rounded-xl p-5 bg-zinc-800/50 backdrop-blur-sm group-hover:bg-zinc-800/80 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl border"
+                    style={{
+                      borderColor: `${skill.color}4D`,
+                    }}
+                  >
                     <div className="flex flex-col items-center gap-3">
                       <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
                         {skill.icon}
                       </div>
-                      <span className="text-sm font-semibold group-hover:text-white transition-colors">
+                      <span
+                        className="text-sm font-semibold transition-colors"
+                      >
                         {skill.name}
                       </span>
 
                       {/* Animated underline */}
-                      <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-transparent via-white to-transparent transition-all duration-300"></div>
+                      <div
+                        className="h-0.5 w-0 group-hover:w-full transition-all duration-300"
+                        style={{
+                          background: `linear-gradient(to right, transparent, ${skill.color}, transparent)`
+                        }}
+                      ></div>
                     </div>
                   </div>
                 </div>
@@ -488,8 +505,8 @@ const Portfolio = () => {
 
           {/* Experience Section with Timeline */}
           <section className="relative mt-24 py-24">
-            <h2 className="text-3xl font-bold mb-8">Experience</h2>
-            <p className="text-xl text-gray-300 mb-12">
+            <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
+            <p className="text-xl text-gray-300 mb-12 text-center">
               My journey in tech
             </p>
 
