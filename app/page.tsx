@@ -60,7 +60,7 @@ const Portfolio = () => {
       url: "https://typesprint-web.vercel.app/",
       image: "/typesprint-screenshot.png",
       description:
-        "Multiplayer typing game with solo practice mode careted with Websockets.",
+        "Multiplayer typing game with solo practice mode created with Websockets.",
       gradient: {
         from: "green-500",
         to: "emerald-500",
@@ -314,7 +314,7 @@ const Portfolio = () => {
 
                 {/* Tagline */}
                 <p className="text-xl text-gray-200 text-center mb-8 max-w-lg mx-auto">
-                  Building{" "}
+                  I build{" "}
                   <span style={{ color: "#32CD30" }} className="font-semibold">
                     modern web solutions
                   </span>{" "}
