@@ -326,13 +326,48 @@ const Portfolio = () => {
             </div>
           </section>
 
+          {/* About Me Section */}
+          <section className="mt-24 mb-12">
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: "#32CD30" }}>
+              Some Things About Me
+            </h2>
+
+            <div className="max-w-3xl mx-auto space-y-6 text-gray-300">
+              <p className="text-xl leading-relaxed font-medium">
+                I am <span style={{ color: "#32CD30" }} className="font-semibold">Pontus Hogler</span>,
+                currently working as a Co-Founder & Fullstack Developer at Webbyro,
+                where I build <span style={{ color: "#32CD30" }} className="font-semibold">modern web solutions</span> and AI products.
+              </p>
+
+              <p className="text-xl leading-relaxed font-medium">
+                I specialize in{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">TypeScript</span>,{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">Next.js</span>, and{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">Tailwind CSS</span>.
+                My tech stack also includes{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">React</span>,{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">Node.js</span>,{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">Supabase</span>, and{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">PostgreSQL</span>.
+              </p>
+
+              <p className="text-xl leading-relaxed font-medium">
+                I'm <span style={{ color: "#32CD30" }} className="font-semibold">passionate</span> about creating{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">seamless user experiences</span> and building
+                scalable full-stack applications. I also have experience with XR development
+                in Unity and C#, having worked on VR training simulations.
+              </p>
+
+              <p className="text-xl leading-relaxed font-medium">
+                I <span style={{ color: "#32CD30" }} className="font-semibold">love</span> making side projects and continuously learning about new technologies
+                to stay at the <span style={{ color: "#32CD30" }} className="font-semibold">forefront</span> of web development.
+              </p>
+            </div>
+          </section>
+
           {/* GitHub Contributions Section */}
           <section className="mt-24">
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent p-8 md:p-10">
-              {/* Background gradient effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
-
-              <div className="relative">
+            <div className="p-8 md:p-10">
                 <div className="flex flex-col items-center mb-8">
                   <div className="text-center mb-4">
                     <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
@@ -397,7 +432,6 @@ const Portfolio = () => {
                     />
                   )}
                 </div>
-              </div>
             </div>
           </section>
 
