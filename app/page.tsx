@@ -89,6 +89,7 @@ const Portfolio = () => {
         { label: "Next.js", color: "#6b7280" },
         { label: "TypeScript", color: "#3b82f6" },
         { label: "Tailwind", color: "#06b6d4" },
+        { label: "Redis", color: "#ef4444" },
       ],
     },
     {
