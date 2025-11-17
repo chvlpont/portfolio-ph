@@ -245,54 +245,48 @@ const Portfolio = () => {
               Some things I've built recently
             </p>
 
-            <div className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {/* Project 1 */}
               <a
                 href="https://imageidentifier.ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500 cursor-pointer"
+                className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative p-8 md:p-10">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    {/* Project Image */}
-                    <div className="md:w-1/3">
-                      <div className="relative aspect-video rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20 overflow-hidden border border-white/10">
-                        <img
-                          src="/imageidentifier-screenshot.png"
-                          alt="ImageIdentifier Screenshot"
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                      </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative p-5 flex flex-col h-full">
+                  {/* Project Image */}
+                  <div className="w-full mb-4">
+                    <div className="relative aspect-video rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20 overflow-hidden border border-white/10">
+                      <img
+                        src="/imageidentifier-screenshot.png"
+                        alt="ImageIdentifier Screenshot"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
                     </div>
+                  </div>
 
-                    {/* Project Info */}
-                    <div className="md:w-2/3 space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors">
-                        Imageidentifier
-                      </h3>
+                  {/* Project Info */}
+                  <div className="flex-1 flex flex-col">
+                    <h3 className="text-lg font-bold group-hover:text-cyan-400 transition-colors mb-2">
+                      Imageidentifier
+                    </h3>
 
-                      <p className="text-gray-400 leading-relaxed">
-                        An AI-powered image identification platform that
-                        analyzes and classifies images with high accuracy.
-                        Features real-time image processing, detailed object
-                        recognition, and an intuitive user interface for
-                        seamless image analysis.
-                      </p>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
+                      AI-powered image identification with real-time processing and object recognition.
+                    </p>
 
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
-                          Next.js
-                        </span>
-                        <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                          TypeScript
-                        </span>
-                        <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
-                          Tailwind
-                        </span>
-                      </div>
+                    <div className="flex flex-wrap gap-1.5 mt-auto">
+                      <span className="px-2 py-1 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded text-xs">
+                        Next.js
+                      </span>
+                      <span className="px-2 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-xs">
+                        TypeScript
+                      </span>
+                      <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded text-xs">
+                        Tailwind
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -303,59 +297,45 @@ const Portfolio = () => {
                 href="https://symbi.se"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500 cursor-pointer"
+                className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative p-8 md:p-10">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    {/* Project Image */}
-                    <div className="md:w-1/3">
-                      <div className="relative aspect-video rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden border border-white/10">
-                        <img
-                          src="/symbi-screenshot.png"
-                          alt="Symbi Screenshot"
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                      </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative p-5 flex flex-col h-full">
+                  {/* Project Image */}
+                  <div className="w-full mb-4">
+                    <div className="relative aspect-video rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden border border-white/10">
+                      <img
+                        src="/symbi-screenshot.png"
+                        alt="Symbi Screenshot"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
                     </div>
+                  </div>
 
-                    {/* Project Info */}
-                    <div className="md:w-2/3 space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors">
-                        Symbi
-                      </h3>
+                  {/* Project Info */}
+                  <div className="flex-1 flex flex-col">
+                    <h3 className="text-lg font-bold group-hover:text-purple-400 transition-colors mb-2">
+                      Symbi
+                    </h3>
 
-                      <p className="text-gray-400 leading-relaxed">
-                        A platform that digitalizes the off-market real estate
-                        market, connecting buyers, sellers, and real estate
-                        agents earlier in the process. Sellers can list
-                        properties privately for free, buyers get exclusive
-                        access to properties before they hit the open market,
-                        and everyone benefits from smarter, more efficient
-                        transactions.
-                      </p>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
+                      Off-market real estate platform connecting buyers, sellers, and agents with exclusive property listings.
+                    </p>
 
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
-                          Next.js
-                        </span>
-                        <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                          TypeScript
-                        </span>
-                        <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
-                          Supabase
-                        </span>
-                        <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                          PostgreSQL
-                        </span>
-                        <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
-                          Tailwind
-                        </span>
-                        <span className="px-3 py-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-lg text-xs font-medium">
-                          NextAuth
-                        </span>
-                      </div>
+                    <div className="flex flex-wrap gap-1.5 mt-auto">
+                      <span className="px-2 py-1 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded text-xs">
+                        Next.js
+                      </span>
+                      <span className="px-2 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-xs">
+                        TypeScript
+                      </span>
+                      <span className="px-2 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded text-xs">
+                        Supabase
+                      </span>
+                      <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded text-xs">
+                        Tailwind
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -366,47 +346,42 @@ const Portfolio = () => {
                 href="https://aquafix.se"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500 cursor-pointer"
+                className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-green-500/5 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative p-8 md:p-10">
-                  <div className="flex flex-col md:flex-row gap-8">
-                    {/* Project Image */}
-                    <div className="md:w-1/3">
-                      <div className="relative aspect-video rounded-lg bg-gradient-to-br from-blue-500/20 to-green-500/20 overflow-hidden border border-white/10">
-                        <img
-                          src="/aquafix-screenshot.png"
-                          alt="Aquafix Screenshot"
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                      </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative p-5 flex flex-col h-full">
+                  {/* Project Image */}
+                  <div className="w-full mb-4">
+                    <div className="relative aspect-video rounded-lg bg-gradient-to-br from-blue-500/20 to-green-500/20 overflow-hidden border border-white/10">
+                      <img
+                        src="/aquafix-screenshot.png"
+                        alt="Aquafix Screenshot"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
                     </div>
+                  </div>
 
-                    {/* Project Info */}
-                    <div className="md:w-2/3 space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-bold group-hover:text-blue-400 transition-colors">
-                        AquaFix
-                      </h3>
+                  {/* Project Info */}
+                  <div className="flex-1 flex flex-col">
+                    <h3 className="text-lg font-bold group-hover:text-blue-400 transition-colors mb-2">
+                      AquaFix
+                    </h3>
 
-                      <p className="text-gray-400 leading-relaxed">
-                        Professional cleaning services in Stockholm including
-                        roof cleaning, facade cleaning, gutter cleaning,
-                        high-altitude cleaning, and HOA services. Specializing
-                        in gentle removal of moss, algae, and black mold.
-                      </p>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
+                      Professional cleaning services in Stockholm specializing in roof, facade, and gutter cleaning.
+                    </p>
 
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded-lg text-xs font-medium">
-                          HTML
-                        </span>
-                        <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                          CSS
-                        </span>
-                        <span className="px-3 py-1.5 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-lg text-xs font-medium">
-                          WordPress
-                        </span>
-                      </div>
+                    <div className="flex flex-wrap gap-1.5 mt-auto">
+                      <span className="px-2 py-1 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded text-xs">
+                        HTML
+                      </span>
+                      <span className="px-2 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-xs">
+                        CSS
+                      </span>
+                      <span className="px-2 py-1 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded text-xs">
+                        WordPress
+                      </span>
                     </div>
                   </div>
                 </div>
