@@ -42,6 +42,25 @@ const Portfolio = () => {
 
   const projects = [
     {
+      name: "TypeSprint",
+      url: "https://typesprint-web.vercel.app/",
+      image: "/typesprint-screenshot.png",
+      description:
+        "Race your keys. Beat your best. Multiplayer typing game with solo practice mode and real-time racing.",
+      gradient: {
+        from: "green-500",
+        to: "emerald-500",
+      },
+      hoverColor: "emerald-400",
+      tags: [
+        { label: "Next.js", color: "gray-500" },
+        { label: "TypeScript", color: "blue-500" },
+        { label: "Supabase", color: "green-500" },
+        { label: "PostgreSQL", color: "blue-500" },
+        { label: "WebSockets", color: "purple-500" },
+      ],
+    },
+    {
       name: "Imageidentifier",
       url: "https://imageidentifier.ai",
       image: "/imageidentifier-screenshot.png",
