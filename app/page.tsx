@@ -40,6 +40,138 @@ const Portfolio = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  const projects = [
+    {
+      name: "Imageidentifier",
+      url: "https://imageidentifier.ai",
+      image: "/imageidentifier-screenshot.png",
+      description:
+        "AI-powered image identification with real-time processing and object recognition.",
+      gradient: {
+        from: "cyan-500",
+        to: "purple-500",
+      },
+      hoverColor: "cyan-400",
+      tags: [
+        { label: "Next.js", color: "gray-500" },
+        { label: "TypeScript", color: "blue-500" },
+        { label: "Tailwind", color: "cyan-500" },
+      ],
+    },
+    {
+      name: "Symbi",
+      url: "https://symbi.se",
+      image: "/symbi-screenshot.png",
+      description:
+        "Off-market real estate platform connecting buyers, sellers, and agents with exclusive property listings.",
+      gradient: {
+        from: "purple-500",
+        to: "pink-500",
+      },
+      hoverColor: "purple-400",
+      tags: [
+        { label: "Next.js", color: "gray-500" },
+        { label: "TypeScript", color: "blue-500" },
+        { label: "Supabase", color: "green-500" },
+        { label: "Tailwind", color: "cyan-500" },
+      ],
+    },
+    {
+      name: "AquaFix",
+      url: "https://aquafix.se",
+      image: "/aquafix-screenshot.png",
+      description:
+        "Professional cleaning services in Stockholm specializing in roof, facade, and gutter cleaning.",
+      gradient: {
+        from: "blue-500",
+        to: "green-500",
+      },
+      hoverColor: "blue-400",
+      tags: [
+        { label: "HTML", color: "orange-500" },
+        { label: "CSS", color: "blue-500" },
+        { label: "WordPress", color: "indigo-500" },
+      ],
+    },
+  ];
+
+  const experiences = [
+    {
+      title: "Co-Founder & Fullstack Developer",
+      company: "Webbyro",
+      period: "Aug 2024 - Present",
+      gradient: {
+        from: "cyan-500",
+        to: "blue-500",
+      },
+      accentColor: "cyan-400",
+      responsibilities: [
+        "Co-founded and built Webbyro alongside my brother and a friend",
+        "Developed affordable websites for businesses using modern web technologies",
+        "Currently focusing on developing an AI product",
+        "Full-stack development with Next.js, TypeScript, and Supabase",
+      ],
+      tags: [
+        { label: "Next.js", color: "gray-500" },
+        { label: "TypeScript", color: "blue-500" },
+        { label: "JavaScript", color: "yellow-500" },
+        { label: "Tailwind", color: "cyan-500" },
+        { label: "Supabase", color: "green-500" },
+        { label: "PostgreSQL", color: "blue-500" },
+        { label: "Firebase", color: "amber-500" },
+        { label: "WordPress", color: "indigo-500" },
+        { label: "SEO", color: "purple-500" },
+      ],
+    },
+    {
+      title: "Full Stack Developer - Intern",
+      company: "Knowingly",
+      period: "Mar 2025 - Jun 2025",
+      gradient: {
+        from: "purple-500",
+        to: "pink-500",
+      },
+      accentColor: "purple-400",
+      responsibilities: [
+        "Enhanced AI-powered community platform to improve user connections",
+        "Implemented new features on both frontend and backend",
+        "Improved existing functionality and user experience",
+        "Full-stack development with TypeScript, Next.js, and PostgreSQL",
+      ],
+      tags: [
+        { label: "TypeScript", color: "blue-500" },
+        { label: "Next.js", color: "gray-500" },
+        { label: "PostgreSQL", color: "blue-500" },
+        { label: "Supabase", color: "green-500" },
+        { label: "Prisma", color: "purple-500" },
+        { label: "Tailwind CSS", color: "cyan-500" },
+      ],
+    },
+    {
+      title: "XR Developer - Intern",
+      company: "Vobling",
+      period: "Dec 2022 - May 2023",
+      gradient: {
+        from: "green-500",
+        to: "blue-500",
+      },
+      accentColor: "green-400",
+      responsibilities: [
+        "Developed VR Fire Trainer, a VR fire safety simulation application",
+        "Created realistic simulations and effects including smoke, fire, and burn marks",
+        "Implemented different types of fire extinguishers in the VR environment",
+        "Built 3D environments using Blender and developed gameplay mechanics with C# in Unity",
+      ],
+      tags: [
+        { label: "Unity", color: "gray-500" },
+        { label: "C#", color: "purple-500" },
+        { label: "Blender", color: "orange-500" },
+        { label: "Adobe Substance Painter", color: "red-500" },
+        { label: "Jira", color: "blue-500" },
+      ],
+    },
+  ];
+
   const skills = [
     { name: "HTML", icon: "🌐", color: "#f97316" },
     { name: "CSS", icon: "🎨", color: "#3b82f6" },
@@ -246,146 +378,60 @@ const Portfolio = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {/* Project 1 */}
-              <a
-                href="https://imageidentifier.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-5 flex flex-col h-full">
-                  {/* Project Image */}
-                  <div className="w-full mb-4">
-                    <div className="relative aspect-video rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20 overflow-hidden border border-white/10">
-                      <img
-                        src="/imageidentifier-screenshot.png"
-                        alt="ImageIdentifier Screenshot"
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
+              {projects.map((project) => (
+                <a
+                  key={project.name}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
+                >
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br from-${project.gradient.from}/5 via-transparent to-${project.gradient.to}/5 pointer-events-none`}
+                  ></div>
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br from-${project.gradient.from}/10 via-transparent to-${project.gradient.to}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                  ></div>
+                  <div className="relative p-5 flex flex-col h-full">
+                    {/* Project Image */}
+                    <div className="w-full mb-4">
+                      <div
+                        className={`relative aspect-video rounded-lg bg-gradient-to-br from-${project.gradient.from}/20 to-${project.gradient.to}/20 overflow-hidden border border-white/10`}
+                      >
+                        <img
+                          src={project.image}
+                          alt={`${project.name} Screenshot`}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Project Info */}
+                    <div className="flex-1 flex flex-col">
+                      <h3
+                        className={`text-lg font-bold group-hover:text-${project.hoverColor} transition-colors mb-2`}
+                      >
+                        {project.name}
+                      </h3>
+
+                      <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
+                        {project.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-1.5 mt-auto">
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag.label}
+                            className={`px-2 py-1 bg-${tag.color}/10 text-${tag.color.replace("-500", "-400")} border border-${tag.color}/20 rounded text-xs`}
+                          >
+                            {tag.label}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
-                  {/* Project Info */}
-                  <div className="flex-1 flex flex-col">
-                    <h3 className="text-lg font-bold group-hover:text-cyan-400 transition-colors mb-2">
-                      Imageidentifier
-                    </h3>
-
-                    <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
-                      AI-powered image identification with real-time processing and object recognition.
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5 mt-auto">
-                      <span className="px-2 py-1 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded text-xs">
-                        Next.js
-                      </span>
-                      <span className="px-2 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-xs">
-                        TypeScript
-                      </span>
-                      <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded text-xs">
-                        Tailwind
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              {/* Project 2 */}
-              <a
-                href="https://symbi.se"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-5 flex flex-col h-full">
-                  {/* Project Image */}
-                  <div className="w-full mb-4">
-                    <div className="relative aspect-video rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 overflow-hidden border border-white/10">
-                      <img
-                        src="/symbi-screenshot.png"
-                        alt="Symbi Screenshot"
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Project Info */}
-                  <div className="flex-1 flex flex-col">
-                    <h3 className="text-lg font-bold group-hover:text-purple-400 transition-colors mb-2">
-                      Symbi
-                    </h3>
-
-                    <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
-                      Off-market real estate platform connecting buyers, sellers, and agents with exclusive property listings.
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5 mt-auto">
-                      <span className="px-2 py-1 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded text-xs">
-                        Next.js
-                      </span>
-                      <span className="px-2 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-xs">
-                        TypeScript
-                      </span>
-                      <span className="px-2 py-1 bg-green-500/10 text-green-400 border border-green-500/20 rounded text-xs">
-                        Supabase
-                      </span>
-                      <span className="px-2 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded text-xs">
-                        Tailwind
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-
-              {/* Project 3 */}
-              <a
-                href="https://aquafix.se"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-green-500/5 pointer-events-none"></div>
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-green-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-5 flex flex-col h-full">
-                  {/* Project Image */}
-                  <div className="w-full mb-4">
-                    <div className="relative aspect-video rounded-lg bg-gradient-to-br from-blue-500/20 to-green-500/20 overflow-hidden border border-white/10">
-                      <img
-                        src="/aquafix-screenshot.png"
-                        alt="Aquafix Screenshot"
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Project Info */}
-                  <div className="flex-1 flex flex-col">
-                    <h3 className="text-lg font-bold group-hover:text-blue-400 transition-colors mb-2">
-                      AquaFix
-                    </h3>
-
-                    <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
-                      Professional cleaning services in Stockholm specializing in roof, facade, and gutter cleaning.
-                    </p>
-
-                    <div className="flex flex-wrap gap-1.5 mt-auto">
-                      <span className="px-2 py-1 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded text-xs">
-                        HTML
-                      </span>
-                      <span className="px-2 py-1 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded text-xs">
-                        CSS
-                      </span>
-                      <span className="px-2 py-1 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded text-xs">
-                        WordPress
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
+                </a>
+              ))}
             </div>
           </section>
 
@@ -455,230 +501,64 @@ const Portfolio = () => {
             </p>
 
             <div className="space-y-8">
-              {/* Experience 1 - Webbyro */}
-              <div className="relative">
-                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {experiences.map((experience) => (
+                <div key={experience.company} className="relative">
+                  <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br from-${experience.gradient.from}/5 via-transparent to-${experience.gradient.to}/5 pointer-events-none`}
+                    ></div>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br from-${experience.gradient.from}/10 via-transparent to-${experience.gradient.to}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                    ></div>
 
-                  <div className="relative p-8 md:p-10">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors">
-                          Co-Founder & Fullstack Developer
-                        </h3>
-                        <p className="text-gray-400 text-lg mt-1">Webbyro</p>
+                    <div className="relative p-8 md:p-10">
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                        <div>
+                          <h3
+                            className={`text-2xl md:text-3xl font-bold group-hover:text-${experience.accentColor} transition-colors`}
+                          >
+                            {experience.title}
+                          </h3>
+                          <p className="text-gray-400 text-lg mt-1">
+                            {experience.company}
+                          </p>
+                        </div>
+                        <div
+                          className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace("-400", "-500")}/10 text-${experience.accentColor} border border-${experience.accentColor.replace("-400", "-500")}/20 rounded-lg text-sm font-medium`}
+                        >
+                          {experience.period}
+                        </div>
                       </div>
-                      <div className="mt-2 md:mt-0 px-4 py-2 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-sm font-medium">
-                        Aug 2024 - Present
+
+                      <ul className="space-y-3 mb-6 text-gray-300">
+                        {experience.responsibilities.map(
+                          (responsibility, index) => (
+                            <li key={index} className="flex items-start gap-2">
+                              <span
+                                className={`text-${experience.accentColor} mt-1`}
+                              >
+                                ▹
+                              </span>
+                              <span>{responsibility}</span>
+                            </li>
+                          )
+                        )}
+                      </ul>
+
+                      <div className="flex flex-wrap gap-2">
+                        {experience.tags.map((tag) => (
+                          <span
+                            key={tag.label}
+                            className={`px-3 py-1.5 bg-${tag.color}/10 text-${tag.color.replace("-500", "-400")} border border-${tag.color}/20 rounded-lg text-xs font-medium`}
+                          >
+                            {tag.label}
+                          </span>
+                        ))}
                       </div>
-                    </div>
-
-                    <ul className="space-y-3 mb-6 text-gray-300">
-                      <li className="flex items-start gap-2">
-                        <span className="text-cyan-400 mt-1">▹</span>
-                        <span>
-                          Co-founded and built Webbyro alongside my brother and
-                          a friend
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-cyan-400 mt-1">▹</span>
-                        <span>
-                          Developed affordable websites for businesses using
-                          modern web technologies
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-cyan-400 mt-1">▹</span>
-                        <span>
-                          Currently focusing on developing an AI product
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-cyan-400 mt-1">▹</span>
-                        <span>
-                          Full-stack development with Next.js, TypeScript, and
-                          Supabase
-                        </span>
-                      </li>
-                    </ul>
-
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
-                        Next.js
-                      </span>
-                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                        TypeScript
-                      </span>
-                      <span className="px-3 py-1.5 bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 rounded-lg text-xs font-medium">
-                        JavaScript
-                      </span>
-                      <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
-                        Tailwind
-                      </span>
-                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
-                        Supabase
-                      </span>
-                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                        PostgreSQL
-                      </span>
-                      <span className="px-3 py-1.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 rounded-lg text-xs font-medium">
-                        Firebase
-                      </span>
-                      <span className="px-3 py-1.5 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-lg text-xs font-medium">
-                        WordPress
-                      </span>
-                      <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-medium">
-                        SEO
-                      </span>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Experience 2 - Knowingly */}
-              <div className="relative">
-                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-pink-500/5 pointer-events-none"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  <div className="relative p-8 md:p-10">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors">
-                          Full Stack Developer - Intern
-                        </h3>
-                        <p className="text-gray-400 text-lg mt-1">Knowingly</p>
-                      </div>
-                      <div className="mt-2 md:mt-0 px-4 py-2 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-sm font-medium">
-                        Mar 2025 - Jun 2025
-                      </div>
-                    </div>
-
-                    <ul className="space-y-3 mb-6 text-gray-300">
-                      <li className="flex items-start gap-2">
-                        <span className="text-purple-400 mt-1">▹</span>
-                        <span>
-                          Enhanced AI-powered community platform to improve user
-                          connections
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-purple-400 mt-1">▹</span>
-                        <span>
-                          Implemented new features on both frontend and backend
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-purple-400 mt-1">▹</span>
-                        <span>
-                          Improved existing functionality and user experience
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-purple-400 mt-1">▹</span>
-                        <span>
-                          Full-stack development with TypeScript, Next.js, and
-                          PostgreSQL
-                        </span>
-                      </li>
-                    </ul>
-
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                        TypeScript
-                      </span>
-                      <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
-                        Next.js
-                      </span>
-                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                        PostgreSQL
-                      </span>
-                      <span className="px-3 py-1.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-xs font-medium">
-                        Supabase
-                      </span>
-                      <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-medium">
-                        Prisma
-                      </span>
-                      <span className="px-3 py-1.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-lg text-xs font-medium">
-                        Tailwind CSS
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Experience 3 - Vobling */}
-              <div className="relative">
-                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                  <div className="relative p-8 md:p-10">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                      <div>
-                        <h3 className="text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors">
-                          XR Developer - Intern
-                        </h3>
-                        <p className="text-gray-400 text-lg mt-1">Vobling</p>
-                      </div>
-                      <div className="mt-2 md:mt-0 px-4 py-2 bg-green-500/10 text-green-400 border border-green-500/20 rounded-lg text-sm font-medium">
-                        Dec 2022 - May 2023
-                      </div>
-                    </div>
-
-                    <ul className="space-y-3 mb-6 text-gray-300">
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">▹</span>
-                        <span>
-                          Developed VR Fire Trainer, a VR fire safety simulation
-                          application
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">▹</span>
-                        <span>
-                          Created realistic simulations and effects including
-                          smoke, fire, and burn marks
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">▹</span>
-                        <span>
-                          Implemented different types of fire extinguishers in
-                          the VR environment
-                        </span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">▹</span>
-                        <span>
-                          Built 3D environments using Blender and developed
-                          gameplay mechanics with C# in Unity
-                        </span>
-                      </li>
-                    </ul>
-
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1.5 bg-gray-500/10 text-gray-300 border border-gray-500/20 rounded-lg text-xs font-medium">
-                        Unity
-                      </span>
-                      <span className="px-3 py-1.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded-lg text-xs font-medium">
-                        C#
-                      </span>
-                      <span className="px-3 py-1.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded-lg text-xs font-medium">
-                        Blender
-                      </span>
-                      <span className="px-3 py-1.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded-lg text-xs font-medium">
-                        Adobe Substance Painter
-                      </span>
-                      <span className="px-3 py-1.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 rounded-lg text-xs font-medium">
-                        Jira
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
 
