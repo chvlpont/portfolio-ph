@@ -250,7 +250,7 @@ const Portfolio = () => {
               <div className="flex items-center gap-6">
                 <a
                   href="/resume.pdf"
-                  className="hover:text-gray-300 transition-colors flex items-center gap-2"
+                  className="hover:text-gray-200 transition-colors flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -259,7 +259,7 @@ const Portfolio = () => {
                 </a>
                 <a
                   href="https://github.com/chvlpont"
-                  className="hover:text-gray-300 transition-colors flex items-center gap-2"
+                  className="hover:text-gray-200 transition-colors flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -332,14 +332,14 @@ const Portfolio = () => {
               Some Things About Me
             </h2>
 
-            <div className="max-w-3xl mx-auto space-y-6 text-gray-300">
-              <p className="text-xl leading-relaxed font-medium">
+            <div className="max-w-3xl mx-auto space-y-6">
+              <p className="text-xl leading-relaxed font-medium text-gray-200">
                 I am <span style={{ color: "#32CD30" }} className="font-semibold">Pontus Hogler</span>,
-                currently working as a Co-Founder & Fullstack Developer at Webbyro,
+                currently working as a <span className="text-white font-semibold">Co-Founder & Fullstack Developer</span> at Webbyro,
                 where I build <span style={{ color: "#32CD30" }} className="font-semibold">modern web solutions</span> and AI products.
               </p>
 
-              <p className="text-xl leading-relaxed font-medium">
+              <p className="text-xl leading-relaxed font-medium text-gray-200">
                 I specialize in{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">TypeScript</span>,{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">Next.js</span>, and{" "}
@@ -351,14 +351,14 @@ const Portfolio = () => {
                 <span style={{ color: "#32CD30" }} className="font-semibold">PostgreSQL</span>.
               </p>
 
-              <p className="text-xl leading-relaxed font-medium">
+              <p className="text-xl leading-relaxed font-medium text-gray-200">
                 I'm <span style={{ color: "#32CD30" }} className="font-semibold">passionate</span> about creating{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">seamless user experiences</span> and building
                 scalable full-stack applications. I also have experience with XR development
                 in Unity and C#, having worked on VR training simulations.
               </p>
 
-              <p className="text-xl leading-relaxed font-medium">
+              <p className="text-xl leading-relaxed font-medium text-gray-200">
                 I <span style={{ color: "#32CD30" }} className="font-semibold">love</span> making side projects and continuously learning about new technologies
                 to stay at the <span style={{ color: "#32CD30" }} className="font-semibold">forefront</span> of web development.
               </p>
@@ -371,7 +371,7 @@ const Portfolio = () => {
                 <div className="flex flex-col items-center mb-8">
                   <div className="text-center mb-4">
                     <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
-                    <p className="text-gray-400">My contributions in 2025</p>
+                    <p className="text-gray-200">My contributions in 2025</p>
                   </div>
                   <a
                     href="https://github.com/chvlpont"
@@ -440,7 +440,7 @@ const Portfolio = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Featured Projects
             </h2>
-            <p className="text-xl text-gray-300 mb-12 text-center">
+            <p className="text-xl text-gray-200 mb-12 text-center">
               Some things I've built recently
             </p>
 
@@ -451,7 +451,7 @@ const Portfolio = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block group relative overflow-hidden rounded-xl bg-[#0d1117] hover:bg-[#161b22] hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
+                  className="block group relative overflow-hidden rounded-xl bg-gradient-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
                 >
                   {/* Project Image - Large, no border */}
                   <div className="relative w-full aspect-[16/10] overflow-hidden">
@@ -507,7 +507,7 @@ const Portfolio = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">
               The Secret Recipe
             </h2>
-            <p className="text-xl text-gray-300 mb-12 text-center">
+            <p className="text-xl text-gray-200 mb-12 text-center">
               Technologies and tools I use to bring ideas to life.
             </p>
 
@@ -563,7 +563,7 @@ const Portfolio = () => {
           {/* Experience Section with Timeline */}
           <section className="relative mt-24">
             <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
-            <p className="text-xl text-gray-300 mb-12 text-center">
+            <p className="text-xl text-gray-200 mb-12 text-center">
               My journey in tech
             </p>
 
@@ -586,7 +586,7 @@ const Portfolio = () => {
                           >
                             {experience.title}
                           </h3>
-                          <p className="text-gray-400 text-lg mt-1">
+                          <p className="text-gray-200 text-lg mt-1">
                             {experience.company}
                           </p>
                         </div>
@@ -605,7 +605,7 @@ const Portfolio = () => {
                         </div>
                       </div>
 
-                      <ul className="space-y-3 mb-6 text-gray-300">
+                      <ul className="space-y-3 mb-6 text-gray-200">
                         {experience.responsibilities.map(
                           (responsibility, index) => (
                             <li key={index} className="flex items-start gap-2">
@@ -649,7 +649,7 @@ const Portfolio = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Get In Touch
             </h2>
-            <p className="text-xl text-gray-300 mb-12 text-center">
+            <p className="text-xl text-gray-200 mb-12 text-center">
               Have a question or want to work together?
             </p>
 
@@ -696,7 +696,7 @@ const Portfolio = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium mb-2 text-gray-300"
+                      className="block text-sm font-medium mb-2 text-gray-200"
                     >
                       Name
                     </label>
@@ -713,7 +713,7 @@ const Portfolio = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium mb-2 text-gray-300"
+                      className="block text-sm font-medium mb-2 text-gray-200"
                     >
                       Email
                     </label>
@@ -730,7 +730,7 @@ const Portfolio = () => {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium mb-2 text-gray-300"
+                      className="block text-sm font-medium mb-2 text-gray-200"
                     >
                       Message
                     </label>
@@ -759,7 +759,7 @@ const Portfolio = () => {
 
         {/* Footer */}
         <footer className="border-t border-white/20 mt-24">
-          <div className="max-w-7xl mx-auto px-6 py-8 text-center text-gray-400">
+          <div className="max-w-7xl mx-auto px-6 py-8 text-center text-gray-200">
             <p>© 2025 Your Name. All rights reserved.</p>
           </div>
         </footer>
