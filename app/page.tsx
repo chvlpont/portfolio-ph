@@ -331,7 +331,7 @@ const Portfolio = () => {
                     View Projects
                   </a>
                   <a
-                    href="mailto:your.email@example.com"
+                    href="#contact"
                     className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     Get in Touch
@@ -380,24 +380,20 @@ const Portfolio = () => {
               className="text-3xl font-bold mb-8 text-center"
               style={{ color: "#32CD30" }}
             >
-              Some Things About Me
+              About Me
             </h2>
 
-            <div className="max-w-3xl mx-auto space-y-6">
+            <div className="max-w-7xl mx-auto space-y-6">
               <p className="text-xl leading-relaxed font-medium text-gray-200">
                 I am{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   Pontus Hogler
                 </span>
-                , currently working as a{" "}
-                <span className="text-white font-semibold">
-                  Co-Founder & Fullstack Developer
-                </span>{" "}
-                at Webbyro, where I build{" "}
+                , currently working as a Co-Founder & Fullstack Developer at{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
-                  modern web solutions
-                </span>{" "}
-                and AI products.
+                  Webbyro
+                </span>
+                , where I build modern web solutions and AI products.
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
@@ -413,50 +409,27 @@ const Portfolio = () => {
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   Tailwind CSS
                 </span>
-                . My tech stack also includes{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  React
-                </span>
-                ,{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  Node.js
-                </span>
-                ,{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  Supabase
-                </span>
-                , and{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  PostgreSQL
-                </span>
-                .
+                . My tech stack also includes React, Node.js, Supabase, and PostgreSQL.
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
-                I'm{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  passionate
-                </span>{" "}
-                about creating{" "}
+                I'm passionate about creating{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   seamless user experiences
                 </span>{" "}
-                and building scalable full-stack applications. I also have
-                experience with XR development in Unity and C#, having worked on
-                VR training simulations.
+                and building{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  scalable full-stack applications
+                </span>
+                . I also have experience with XR development in Unity and C#, having worked on VR training simulations.
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
-                I{" "}
+                I love making{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
-                  love
+                  side projects
                 </span>{" "}
-                making side projects and continuously learning about new
-                technologies to stay at the{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  forefront
-                </span>{" "}
-                of web development.
+                and continuously learning about new technologies to stay at the forefront of web development.
               </p>
             </div>
           </section>
@@ -739,7 +712,7 @@ const Portfolio = () => {
           </section>
 
           {/* Contact Section */}
-          <section className="mt-24">
+          <section id="contact" className="mt-24">
             <h2 className="text-3xl font-bold mb-8 text-center">
               Get In Touch
             </h2>
