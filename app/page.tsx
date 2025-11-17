@@ -10,6 +10,29 @@ import {
   Gitlab,
   ExternalLink,
 } from "lucide-react";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiGit,
+  SiTailwindcss,
+  SiMongodb,
+  SiRedux,
+  SiExpress,
+  SiFramer,
+  SiBlender,
+  SiUnity,
+  SiWordpress,
+  SiFigma,
+  SiSass,
+  SiFirebase,
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { SiAuth0 } from "react-icons/si";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import ParticleBackground from "./components/ParticleBackground";
@@ -192,28 +215,28 @@ const Portfolio = () => {
   ];
 
   const skills = [
-    { name: "HTML", icon: "🌐", color: "#f97316" },
-    { name: "CSS", icon: "🎨", color: "#3b82f6" },
-    { name: "JavaScript", icon: "⚡", color: "#eab308" },
-    { name: "TypeScript", icon: "📘", color: "#60a5fa" },
-    { name: "React", icon: "⚛️", color: "#06b6d4" },
-    { name: "C#", icon: "🔷", color: "#a855f7" },
-    { name: "Next.js", icon: "▲", color: "#6b7280" },
-    { name: "Node.js", icon: "🟢", color: "#22c55e" },
-    { name: "Git", icon: "🔀", color: "#ea580c" },
-    { name: "Tailwind", icon: "🎐", color: "#22d3ee" },
-    { name: "MongoDB", icon: "🍃", color: "#16a34a" },
-    { name: "Redux", icon: "🔄", color: "#9333ea" },
-    { name: "Express", icon: "🚂", color: "#9ca3af" },
-    { name: "Framer Motion", icon: "🎬", color: "#ec4899" },
-    { name: "Blender", icon: "🎲", color: "#fb923c" },
-    { name: "Unity", icon: "🎮", color: "#d1d5db" },
-    { name: "WordPress", icon: "📝", color: "#2563eb" },
-    { name: "Figma", icon: "🎨", color: "#ef4444" },
-    { name: "SCSS", icon: "💅", color: "#db2777" },
-    { name: "Firebase", icon: "🔥", color: "#ca8a04" },
-    { name: "Clerk", icon: "🔐", color: "#6366f1" },
-    { name: "Context", icon: "🔗", color: "#14b8a6" },
+    { name: "HTML", icon: SiHtml5, color: "#f97316" },
+    { name: "CSS", icon: SiCss3, color: "#3b82f6" },
+    { name: "JavaScript", icon: SiJavascript, color: "#eab308" },
+    { name: "TypeScript", icon: SiTypescript, color: "#60a5fa" },
+    { name: "React", icon: SiReact, color: "#06b6d4" },
+    { name: "C#", icon: TbBrandCSharp, color: "#a855f7" },
+    { name: "Next.js", icon: SiNextdotjs, color: "#6b7280" },
+    { name: "Node.js", icon: SiNodedotjs, color: "#22c55e" },
+    { name: "Git", icon: SiGit, color: "#ea580c" },
+    { name: "Tailwind", icon: SiTailwindcss, color: "#22d3ee" },
+    { name: "MongoDB", icon: SiMongodb, color: "#16a34a" },
+    { name: "Redux", icon: SiRedux, color: "#9333ea" },
+    { name: "Express", icon: SiExpress, color: "#9ca3af" },
+    { name: "Framer Motion", icon: SiFramer, color: "#ec4899" },
+    { name: "Blender", icon: SiBlender, color: "#fb923c" },
+    { name: "Unity", icon: SiUnity, color: "#d1d5db" },
+    { name: "WordPress", icon: SiWordpress, color: "#2563eb" },
+    { name: "Figma", icon: SiFigma, color: "#ef4444" },
+    { name: "SCSS", icon: SiSass, color: "#db2777" },
+    { name: "Firebase", icon: SiFirebase, color: "#ca8a04" },
+    { name: "Clerk", icon: SiAuth0, color: "#6366f1" },
+    { name: "Context", icon: SiReact, color: "#14b8a6" },
   ];
 
   return (
@@ -482,9 +505,9 @@ const Portfolio = () => {
                       }}
                     ></div>
 
-                    {/* Glow effect on hover */}
+                    {/* Glow effect - always visible, intensifies on hover */}
                     <div
-                      className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl pointer-events-none"
+                      className="absolute inset-0 rounded-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 blur-xl pointer-events-none"
                       style={{
                         background: `radial-gradient(circle at center, ${skill.color}66, transparent)`,
                       }}
@@ -492,7 +515,7 @@ const Portfolio = () => {
 
                     <div className="relative flex flex-col items-center gap-3">
                       <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
-                        {skill.icon}
+                        <skill.icon style={{ color: skill.color }} />
                       </div>
                       <span className="text-sm font-semibold transition-colors">
                         {skill.name}
