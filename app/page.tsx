@@ -46,7 +46,7 @@ const Portfolio = () => {
       url: "https://typesprint-web.vercel.app/",
       image: "/typesprint-screenshot.png",
       description:
-        "Race your keys. Beat your best. Multiplayer typing game with solo practice mode and real-time racing.",
+        "Multiplayer typing game with solo practice mode careted with Websockets.",
       gradient: {
         from: "green-500",
         to: "emerald-500",
@@ -82,7 +82,7 @@ const Portfolio = () => {
       url: "https://symbi.se",
       image: "/symbi-screenshot.png",
       description:
-        "Off-market real estate platform connecting buyers, sellers, and agents with exclusive property listings.",
+        "Off-market real estate platform connecting buyers, sellers, and agents.",
       gradient: {
         from: "purple-500",
         to: "pink-500",
@@ -100,7 +100,7 @@ const Portfolio = () => {
       url: "https://aquafix.se",
       image: "/aquafix-screenshot.png",
       description:
-        "Professional cleaning services in Stockholm specializing in roof, facade, and gutter cleaning.",
+        "Cleaning services specializing in roof, facade, and gutter cleaning.",
       gradient: {
         from: "blue-500",
         to: "green-500",
@@ -396,57 +396,57 @@ const Portfolio = () => {
               Some things I've built recently
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project) => (
                 <a
                   key={project.name}
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-300 cursor-pointer h-full"
+                  className="block group relative overflow-hidden rounded-xl bg-[#0d1117] hover:bg-[#161b22] hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
                 >
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br from-${project.gradient.from}/5 via-transparent to-${project.gradient.to}/5 pointer-events-none`}
-                  ></div>
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br from-${project.gradient.from}/10 via-transparent to-${project.gradient.to}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                  ></div>
-                  <div className="relative p-5 flex flex-col h-full">
-                    {/* Project Image */}
-                    <div className="w-full mb-4">
-                      <div
-                        className={`relative aspect-video rounded-lg bg-gradient-to-br from-${project.gradient.from}/20 to-${project.gradient.to}/20 overflow-hidden border border-white/10`}
-                      >
-                        <img
-                          src={project.image}
-                          alt={`${project.name} Screenshot`}
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
+                  {/* Project Image - Large, no border */}
+                  <div className="relative w-full aspect-[16/10] overflow-hidden">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br from-${project.gradient.from}/20 to-${project.gradient.to}/20`}
+                    ></div>
+                    <img
+                      src={project.image}
+                      alt={`${project.name} Screenshot`}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    {/* Gradient overlay on hover */}
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-t from-${project.gradient.from}/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    ></div>
+                  </div>
 
-                    {/* Project Info */}
-                    <div className="flex-1 flex flex-col">
-                      <h3
-                        className={`text-lg font-bold group-hover:text-${project.hoverColor} transition-colors mb-2`}
-                      >
-                        {project.name}
-                      </h3>
+                  {/* Project Info */}
+                  <div className="p-5 flex flex-col">
+                    <h3
+                      className={`text-lg font-bold group-hover:text-${project.hoverColor} transition-colors mb-2`}
+                    >
+                      {project.name}
+                    </h3>
 
-                      <p className="text-gray-400 text-sm leading-relaxed mb-3 line-clamp-3">
-                        {project.description}
-                      </p>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
 
-                      <div className="flex flex-wrap gap-1.5 mt-auto">
-                        {project.tags.map((tag) => (
-                          <span
-                            key={tag.label}
-                            className={`px-2 py-1 bg-${tag.color}/10 text-${tag.color.replace("-500", "-400")} border border-${tag.color}/20 rounded text-xs`}
-                          >
-                            {tag.label}
-                          </span>
-                        ))}
-                      </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag.label}
+                          className={`px-2 py-1 bg-${
+                            tag.color
+                          }/10 text-${tag.color.replace(
+                            "-500",
+                            "-400"
+                          )} border border-${tag.color}/20 rounded text-xs`}
+                        >
+                          {tag.label}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </a>
@@ -543,7 +543,15 @@ const Portfolio = () => {
                           </p>
                         </div>
                         <div
-                          className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace("-400", "-500")}/10 text-${experience.accentColor} border border-${experience.accentColor.replace("-400", "-500")}/20 rounded-lg text-sm font-medium`}
+                          className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace(
+                            "-400",
+                            "-500"
+                          )}/10 text-${
+                            experience.accentColor
+                          } border border-${experience.accentColor.replace(
+                            "-400",
+                            "-500"
+                          )}/20 rounded-lg text-sm font-medium`}
                         >
                           {experience.period}
                         </div>
@@ -568,7 +576,14 @@ const Portfolio = () => {
                         {experience.tags.map((tag) => (
                           <span
                             key={tag.label}
-                            className={`px-3 py-1.5 bg-${tag.color}/10 text-${tag.color.replace("-500", "-400")} border border-${tag.color}/20 rounded-lg text-xs font-medium`}
+                            className={`px-3 py-1.5 bg-${
+                              tag.color
+                            }/10 text-${tag.color.replace(
+                              "-500",
+                              "-400"
+                            )} border border-${
+                              tag.color
+                            }/20 rounded-lg text-xs font-medium`}
                           >
                             {tag.label}
                           </span>
