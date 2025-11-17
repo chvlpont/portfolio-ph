@@ -1,15 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Github,
-  Mail,
-  FileText,
-  Home,
-  FolderGit2,
-  Gitlab,
-  ExternalLink,
-} from "lucide-react";
+import { Github, Mail, FileText } from "lucide-react";
 import {
   SiHtml5,
   SiCss3,
@@ -30,10 +22,9 @@ import {
   SiFigma,
   SiSass,
   SiFirebase,
+  SiAuth0,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
-import { SiAuth0 } from "react-icons/si";
-import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import ParticleBackground from "./components/ParticleBackground";
 import StockholmClock from "./components/StockholmClock";
