@@ -383,7 +383,7 @@ const Portfolio = () => {
               About Me
             </h2>
 
-            <div className="max-w-7xl mx-auto space-y-6">
+            <div className="max-w-6xl mx-auto space-y-6">
               <p className="text-xl leading-relaxed font-medium text-gray-200">
                 I am{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
@@ -409,7 +409,8 @@ const Portfolio = () => {
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   Tailwind CSS
                 </span>
-                . My tech stack also includes React, Node.js, Supabase, and PostgreSQL.
+                . My tech stack also includes React, Node.js, Supabase, and
+                PostgreSQL.
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
@@ -421,7 +422,8 @@ const Portfolio = () => {
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   scalable full-stack applications
                 </span>
-                . I also have experience with XR development in Unity and C#, having worked on VR training simulations.
+                . I also have experience with XR development in Unity and C#,
+                having worked on VR training simulations.
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
@@ -429,7 +431,8 @@ const Portfolio = () => {
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   side projects
                 </span>{" "}
-                and continuously learning about new technologies to stay at the forefront of web development.
+                and continuously learning about new technologies to stay at the
+                forefront of web development.
               </p>
             </div>
           </section>
