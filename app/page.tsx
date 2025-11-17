@@ -325,13 +325,14 @@ const Portfolio = () => {
                 <div className="flex items-center justify-center gap-4 flex-wrap">
                   <a
                     href="#projects"
-                    className="px-6 py-3 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
+                    style={{ backgroundColor: "rgba(50, 205, 48, 0.6)" }}
+                    className="px-6 py-3 hover:bg-opacity-90 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     View Projects
                   </a>
                   <a
                     href="mailto:your.email@example.com"
-                    className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 text-white font-semibold rounded-lg transition-all duration-300"
+                    className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     Get in Touch
                   </a>
