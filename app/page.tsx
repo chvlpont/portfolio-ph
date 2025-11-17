@@ -311,6 +311,53 @@ const Portfolio = () => {
                     />
                   </span>
                 </h1>
+
+                {/* Tagline */}
+                <p className="text-xl text-gray-200 text-center mb-8 max-w-lg mx-auto">
+                  Building{" "}
+                  <span style={{ color: "#32CD30" }} className="font-semibold">
+                    modern web solutions
+                  </span>{" "}
+                  with TypeScript, Next.js, and Tailwind CSS
+                </p>
+
+                {/* CTA Buttons */}
+                <div className="flex items-center justify-center gap-4 flex-wrap">
+                  <a
+                    href="#projects"
+                    className="px-6 py-3 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
+                  >
+                    View Projects
+                  </a>
+                  <a
+                    href="mailto:your.email@example.com"
+                    className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 text-white font-semibold rounded-lg transition-all duration-300"
+                  >
+                    Get in Touch
+                  </a>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex items-center justify-center gap-4 mt-8">
+                  <a
+                    href="https://github.com/chvlpont"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 rounded-lg transition-all duration-300 hover:scale-110"
+                    aria-label="GitHub"
+                  >
+                    <Github size={24} />
+                  </a>
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 rounded-lg transition-all duration-300 hover:scale-110"
+                    aria-label="Resume"
+                  >
+                    <FileText size={24} />
+                  </a>
+                </div>
               </div>
 
               {/* Right side - Profile Image */}
@@ -327,7 +374,7 @@ const Portfolio = () => {
           </section>
 
           {/* About Me Section */}
-          <section className="mt-24 mb-12">
+          <section className="mt-24 mb-34">
             <h2
               className="text-3xl font-bold mb-8 text-center"
               style={{ color: "#32CD30" }}
@@ -482,7 +529,7 @@ const Portfolio = () => {
           </section>
 
           {/* Projects Section */}
-          <section className="mt-24">
+          <section id="projects" className="mt-24">
             <h2 className="text-3xl font-bold mb-8 text-center">
               Featured Projects
             </h2>
