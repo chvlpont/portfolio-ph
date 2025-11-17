@@ -328,39 +328,87 @@ const Portfolio = () => {
 
           {/* About Me Section */}
           <section className="mt-24 mb-12">
-            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: "#32CD30" }}>
+            <h2
+              className="text-3xl font-bold mb-8 text-center"
+              style={{ color: "#32CD30" }}
+            >
               Some Things About Me
             </h2>
 
             <div className="max-w-3xl mx-auto space-y-6">
               <p className="text-xl leading-relaxed font-medium text-gray-200">
-                I am <span style={{ color: "#32CD30" }} className="font-semibold">Pontus Hogler</span>,
-                currently working as a <span className="text-white font-semibold">Co-Founder & Fullstack Developer</span> at Webbyro,
-                where I build <span style={{ color: "#32CD30" }} className="font-semibold">modern web solutions</span> and AI products.
+                I am{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  Pontus Hogler
+                </span>
+                , currently working as a{" "}
+                <span className="text-white font-semibold">
+                  Co-Founder & Fullstack Developer
+                </span>{" "}
+                at Webbyro, where I build{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  modern web solutions
+                </span>{" "}
+                and AI products.
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
                 I specialize in{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">TypeScript</span>,{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">Next.js</span>, and{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">Tailwind CSS</span>.
-                My tech stack also includes{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">React</span>,{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">Node.js</span>,{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">Supabase</span>, and{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">PostgreSQL</span>.
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  TypeScript
+                </span>
+                ,{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  Next.js
+                </span>
+                , and{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  Tailwind CSS
+                </span>
+                . My tech stack also includes{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  React
+                </span>
+                ,{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  Node.js
+                </span>
+                ,{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  Supabase
+                </span>
+                , and{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  PostgreSQL
+                </span>
+                .
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
-                I'm <span style={{ color: "#32CD30" }} className="font-semibold">passionate</span> about creating{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">seamless user experiences</span> and building
-                scalable full-stack applications. I also have experience with XR development
-                in Unity and C#, having worked on VR training simulations.
+                I'm{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  passionate
+                </span>{" "}
+                about creating{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  seamless user experiences
+                </span>{" "}
+                and building scalable full-stack applications. I also have
+                experience with XR development in Unity and C#, having worked on
+                VR training simulations.
               </p>
 
               <p className="text-xl leading-relaxed font-medium text-gray-200">
-                I <span style={{ color: "#32CD30" }} className="font-semibold">love</span> making side projects and continuously learning about new technologies
-                to stay at the <span style={{ color: "#32CD30" }} className="font-semibold">forefront</span> of web development.
+                I{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  love
+                </span>{" "}
+                making side projects and continuously learning about new
+                technologies to stay at the{" "}
+                <span style={{ color: "#32CD30" }} className="font-semibold">
+                  forefront
+                </span>{" "}
+                of web development.
               </p>
             </div>
           </section>
@@ -368,58 +416,39 @@ const Portfolio = () => {
           {/* GitHub Contributions Section */}
           <section className="mt-24">
             <div className="p-8 md:p-10">
-                <div className="flex flex-col items-center mb-8">
-                  <div className="text-center mb-4">
-                    <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
-                    <p className="text-gray-200">My contributions in 2025</p>
-                  </div>
-                  <a
-                    href="https://github.com/chvlpont"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 transition-all duration-300"
-                  >
-                    <Github
-                      size={20}
-                      className="group-hover:text-green-400 transition-colors"
-                    />
-                    <span className="hidden md:inline text-sm">
-                      View Profile
-                    </span>
-                  </a>
+              <div className="flex flex-col items-center mb-8">
+                <div className="text-center mb-4">
+                  <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
+                  <p className="text-gray-200">My contributions in 2025</p>
                 </div>
-
-                <div
-                  className={`w-full flex justify-center ${
-                    isMobile
-                      ? "[&>article]:!max-w-full [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto"
-                      : ""
-                  }`}
+                <a
+                  href="https://github.com/chvlpont"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 transition-all duration-300"
                 >
-                  {!isMobile ? (
-                    <div className="scale-[0.96] origin-top transition-transform">
-                      <GitHubCalendar
-                        username="chvlpont"
-                        colorScheme="dark"
-                        blockSize={18}
-                        fontSize={16}
-                        theme={{
-                          dark: [
-                            "#161b22",
-                            "#0e4429",
-                            "#006d32",
-                            "#26a641",
-                            "#39d353",
-                          ],
-                        }}
-                      />
-                    </div>
-                  ) : (
+                  <Github
+                    size={20}
+                    className="group-hover:text-green-400 transition-colors"
+                  />
+                  <span className="hidden md:inline text-sm">View Profile</span>
+                </a>
+              </div>
+
+              <div
+                className={`w-full flex justify-center ${
+                  isMobile
+                    ? "[&>article]:!max-w-full [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto"
+                    : ""
+                }`}
+              >
+                {!isMobile ? (
+                  <div className="scale-[0.96] origin-top transition-transform">
                     <GitHubCalendar
                       username="chvlpont"
                       colorScheme="dark"
-                      blockSize={15}
-                      fontSize={14}
+                      blockSize={18}
+                      fontSize={16}
                       theme={{
                         dark: [
                           "#161b22",
@@ -430,8 +459,25 @@ const Portfolio = () => {
                         ],
                       }}
                     />
-                  )}
-                </div>
+                  </div>
+                ) : (
+                  <GitHubCalendar
+                    username="chvlpont"
+                    colorScheme="dark"
+                    blockSize={15}
+                    fontSize={14}
+                    theme={{
+                      dark: [
+                        "#161b22",
+                        "#0e4429",
+                        "#006d32",
+                        "#26a641",
+                        "#39d353",
+                      ],
+                    }}
+                  />
+                )}
+              </div>
             </div>
           </section>
 
