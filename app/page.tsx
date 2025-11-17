@@ -67,11 +67,11 @@ const Portfolio = () => {
       },
       hoverColor: "emerald-400",
       tags: [
-        { label: "Next.js", color: "gray-500" },
-        { label: "TypeScript", color: "blue-500" },
-        { label: "Supabase", color: "green-500" },
-        { label: "PostgreSQL", color: "blue-500" },
-        { label: "WebSockets", color: "purple-500" },
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Supabase", color: "#22c55e" },
+        { label: "PostgreSQL", color: "#3b82f6" },
+        { label: "WebSockets", color: "#a855f7" },
       ],
     },
     {
@@ -86,9 +86,9 @@ const Portfolio = () => {
       },
       hoverColor: "cyan-400",
       tags: [
-        { label: "Next.js", color: "gray-500" },
-        { label: "TypeScript", color: "blue-500" },
-        { label: "Tailwind", color: "cyan-500" },
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Tailwind", color: "#06b6d4" },
       ],
     },
     {
@@ -103,10 +103,10 @@ const Portfolio = () => {
       },
       hoverColor: "purple-400",
       tags: [
-        { label: "Next.js", color: "gray-500" },
-        { label: "TypeScript", color: "blue-500" },
-        { label: "Supabase", color: "green-500" },
-        { label: "Tailwind", color: "cyan-500" },
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Supabase", color: "#22c55e" },
+        { label: "Tailwind", color: "#06b6d4" },
       ],
     },
     {
@@ -121,9 +121,9 @@ const Portfolio = () => {
       },
       hoverColor: "blue-400",
       tags: [
-        { label: "HTML", color: "orange-500" },
-        { label: "CSS", color: "blue-500" },
-        { label: "WordPress", color: "indigo-500" },
+        { label: "HTML", color: "#f97316" },
+        { label: "CSS", color: "#3b82f6" },
+        { label: "WordPress", color: "#6366f1" },
       ],
     },
   ];
@@ -145,15 +145,15 @@ const Portfolio = () => {
         "Full-stack development with Next.js, TypeScript, and Supabase",
       ],
       tags: [
-        { label: "Next.js", color: "gray-500" },
-        { label: "TypeScript", color: "blue-500" },
-        { label: "JavaScript", color: "yellow-500" },
-        { label: "Tailwind", color: "cyan-500" },
-        { label: "Supabase", color: "green-500" },
-        { label: "PostgreSQL", color: "blue-500" },
-        { label: "Firebase", color: "amber-500" },
-        { label: "WordPress", color: "indigo-500" },
-        { label: "SEO", color: "purple-500" },
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "JavaScript", color: "#eab308" },
+        { label: "Tailwind", color: "#06b6d4" },
+        { label: "Supabase", color: "#22c55e" },
+        { label: "PostgreSQL", color: "#3b82f6" },
+        { label: "Firebase", color: "#f59e0b" },
+        { label: "WordPress", color: "#6366f1" },
+        { label: "SEO", color: "#a855f7" },
       ],
     },
     {
@@ -172,12 +172,12 @@ const Portfolio = () => {
         "Full-stack development with TypeScript, Next.js, and PostgreSQL",
       ],
       tags: [
-        { label: "TypeScript", color: "blue-500" },
-        { label: "Next.js", color: "gray-500" },
-        { label: "PostgreSQL", color: "blue-500" },
-        { label: "Supabase", color: "green-500" },
-        { label: "Prisma", color: "purple-500" },
-        { label: "Tailwind CSS", color: "cyan-500" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Next.js", color: "#6b7280" },
+        { label: "PostgreSQL", color: "#3b82f6" },
+        { label: "Supabase", color: "#22c55e" },
+        { label: "Prisma", color: "#a855f7" },
+        { label: "Tailwind CSS", color: "#06b6d4" },
       ],
     },
     {
@@ -196,11 +196,11 @@ const Portfolio = () => {
         "Built 3D environments using Blender and developed gameplay mechanics with C# in Unity",
       ],
       tags: [
-        { label: "Unity", color: "gray-500" },
-        { label: "C#", color: "purple-500" },
-        { label: "Blender", color: "orange-500" },
-        { label: "Adobe Substance Painter", color: "red-500" },
-        { label: "Jira", color: "blue-500" },
+        { label: "Unity", color: "#6b7280" },
+        { label: "C#", color: "#a855f7" },
+        { label: "Blender", color: "#f97316" },
+        { label: "Adobe Substance Painter", color: "#ef4444" },
+        { label: "Jira", color: "#3b82f6" },
       ],
     },
   ];
@@ -521,12 +521,12 @@ const Portfolio = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block group relative overflow-hidden rounded-xl bg-gradient-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
+                  className="block group relative overflow-hidden rounded-xl bg-linear-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
                 >
                   {/* Project Image - Large, no border */}
-                  <div className="relative w-full aspect-[16/10] overflow-hidden">
+                  <div className="relative w-full aspect-16/10 overflow-hidden">
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br from-${project.gradient.from}/20 to-${project.gradient.to}/20`}
+                      className={`absolute inset-0 bg-linear-to-br from-${project.gradient.from}/20 to-${project.gradient.to}/20`}
                     ></div>
                     <img
                       src={project.image}
@@ -535,14 +535,24 @@ const Portfolio = () => {
                     />
                     {/* Gradient overlay on hover */}
                     <div
-                      className={`absolute inset-0 bg-gradient-to-t from-${project.gradient.from}/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                      className={`absolute inset-0 bg-linear-to-t from-${project.gradient.from}/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                     ></div>
                   </div>
 
                   {/* Project Info */}
                   <div className="p-5 flex flex-col">
                     <h3
-                      className={`text-lg font-bold group-hover:text-${project.hoverColor} transition-colors mb-2`}
+                      className={
+                        project.hoverColor === "emerald-400"
+                          ? "text-lg font-bold group-hover:text-emerald-400 transition-colors mb-2"
+                          : project.hoverColor === "cyan-400"
+                          ? "text-lg font-bold group-hover:text-cyan-400 transition-colors mb-2"
+                          : project.hoverColor === "purple-400"
+                          ? "text-lg font-bold group-hover:text-purple-400 transition-colors mb-2"
+                          : project.hoverColor === "blue-400"
+                          ? "text-lg font-bold group-hover:text-blue-400 transition-colors mb-2"
+                          : "text-lg font-bold transition-colors mb-2"
+                      }
                     >
                       {project.name}
                     </h3>
@@ -555,12 +565,12 @@ const Portfolio = () => {
                       {project.tags.map((tag) => (
                         <span
                           key={tag.label}
-                          className={`px-2 py-1 bg-${
-                            tag.color
-                          }/10 text-${tag.color.replace(
-                            "-500",
-                            "-400"
-                          )} border border-${tag.color}/20 rounded text-xs`}
+                          className="px-2 py-1 rounded text-xs"
+                          style={{
+                            backgroundColor: `${tag.color}1A`,
+                            color: tag.color,
+                            border: `1px solid ${tag.color}33`,
+                          }}
                         >
                           {tag.label}
                         </span>
@@ -591,7 +601,7 @@ const Portfolio = () => {
                   }}
                 >
                   {/* Card content */}
-                  <div className="relative rounded-xl p-5 bg-gradient-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden">
+                  <div className="relative rounded-xl p-5 bg-linear-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden">
                     {/* Subtle background gradient */}
                     <div
                       className="absolute inset-0 pointer-events-none"
@@ -640,19 +650,27 @@ const Portfolio = () => {
             <div className="space-y-8">
               {experiences.map((experience) => (
                 <div key={experience.company} className="relative">
-                  <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
+                  <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br from-${experience.gradient.from}/5 via-transparent to-${experience.gradient.to}/5 pointer-events-none`}
+                      className={`absolute inset-0 bg-linear-to-br from-${experience.gradient.from}/5 via-transparent to-${experience.gradient.to}/5 pointer-events-none`}
                     ></div>
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br from-${experience.gradient.from}/10 via-transparent to-${experience.gradient.to}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                      className={`absolute inset-0 bg-linear-to-br from-${experience.gradient.from}/10 via-transparent to-${experience.gradient.to}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                     ></div>
 
                     <div className="relative p-8 md:p-10">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                         <div>
                           <h3
-                            className={`text-2xl md:text-3xl font-bold group-hover:text-${experience.accentColor} transition-colors`}
+                            className={
+                              experience.accentColor === "cyan-400"
+                                ? "text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors"
+                                : experience.accentColor === "purple-400"
+                                ? "text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors"
+                                : experience.accentColor === "green-400"
+                                ? "text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors"
+                                : "text-2xl md:text-3xl font-bold transition-colors"
+                            }
                           >
                             {experience.title}
                           </h3>
@@ -680,7 +698,15 @@ const Portfolio = () => {
                           (responsibility, index) => (
                             <li key={index} className="flex items-start gap-2">
                               <span
-                                className={`text-${experience.accentColor} mt-1`}
+                                className={
+                                  experience.accentColor === "cyan-400"
+                                    ? "text-cyan-400 mt-1"
+                                    : experience.accentColor === "purple-400"
+                                    ? "text-purple-400 mt-1"
+                                    : experience.accentColor === "green-400"
+                                    ? "text-green-400 mt-1"
+                                    : "mt-1"
+                                }
                               >
                                 ▹
                               </span>
@@ -694,14 +720,12 @@ const Portfolio = () => {
                         {experience.tags.map((tag) => (
                           <span
                             key={tag.label}
-                            className={`px-3 py-1.5 bg-${
-                              tag.color
-                            }/10 text-${tag.color.replace(
-                              "-500",
-                              "-400"
-                            )} border border-${
-                              tag.color
-                            }/20 rounded-lg text-xs font-medium`}
+                            className="px-3 py-1.5 rounded-lg text-xs font-medium"
+                            style={{
+                              backgroundColor: `${tag.color}1A`,
+                              color: tag.color,
+                              border: `1px solid ${tag.color}33`,
+                            }}
                           >
                             {tag.label}
                           </span>
@@ -724,9 +748,9 @@ const Portfolio = () => {
             </p>
 
             <div className="max-w-2xl mx-auto">
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-transparent p-8 md:p-10">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/5 via-transparent to-transparent p-8 md:p-10">
                 {/* Background gradient effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
 
                 <form
                   className="relative space-y-6"
@@ -816,7 +840,7 @@ const Portfolio = () => {
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2"
                   >
                     <Mail size={20} />
                     Send Message
