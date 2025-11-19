@@ -212,6 +212,7 @@ const Portfolio = () => {
         to: "pink-500",
       },
       accentColor: "purple-400",
+      url: "https://knowingly.ai/",
       responsibilities: [
         "Enhanced AI-powered community platform to improve user connections",
         "Implemented new features on both frontend and backend",
@@ -236,6 +237,7 @@ const Portfolio = () => {
         to: "blue-500",
       },
       accentColor: "green-400",
+      url: "https://www.vobling.com/",
       responsibilities: [
         "Developed VR Fire Trainer, a VR fire safety simulation application",
         "Created realistic simulations and effects including smoke, fire, and burn marks",
@@ -713,82 +715,172 @@ const Portfolio = () => {
             <div className="space-y-8">
               {experiences.map((experience) => (
                 <div key={experience.company} className="relative">
-                  <div className="group relative overflow-hidden rounded-2xl border border-border bg-bg-surface hover:border-accent-primary transition-all duration-500">
-                    <div className="relative p-8 md:p-10">
-                      <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
-                        <div>
-                          <h3
-                            className={
-                              experience.accentColor === "cyan-400"
-                                ? "text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors"
-                                : experience.accentColor === "purple-400"
-                                ? "text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors"
-                                : experience.accentColor === "green-400"
-                                ? "text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors"
-                                : "text-2xl md:text-3xl font-bold transition-colors"
-                            }
+                  {experience.url ? (
+                    <a
+                      href={experience.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group relative overflow-hidden rounded-2xl border border-border bg-bg-surface hover:border-accent-primary transition-all duration-500"
+                    >
+                      <div className="relative p-8 md:p-10">
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                          <div>
+                            <h3
+                              className={
+                                experience.accentColor === "cyan-400"
+                                  ? "text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors"
+                                  : experience.accentColor === "purple-400"
+                                  ? "text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors"
+                                  : experience.accentColor === "green-400"
+                                  ? "text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors"
+                                  : "text-2xl md:text-3xl font-bold transition-colors"
+                              }
+                            >
+                              {experience.title}
+                            </h3>
+                            <p className="text-text-secondary text-lg mt-1">
+                              {experience.company}
+                            </p>
+                          </div>
+                          <div
+                            className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace(
+                              "-400",
+                              "-500"
+                            )}/10 text-${
+                              experience.accentColor
+                            } border border-${experience.accentColor.replace(
+                              "-400",
+                              "-500"
+                            )}/20 rounded-lg text-sm font-medium`}
                           >
-                            {experience.title}
-                          </h3>
-                          <p className="text-text-secondary text-lg mt-1">
-                            {experience.company}
-                          </p>
+                            {experience.period}
+                          </div>
                         </div>
-                        <div
-                          className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace(
-                            "-400",
-                            "-500"
-                          )}/10 text-${
-                            experience.accentColor
-                          } border border-${experience.accentColor.replace(
-                            "-400",
-                            "-500"
-                          )}/20 rounded-lg text-sm font-medium`}
-                        >
-                          {experience.period}
+
+                        <ul className="space-y-3 mb-6 text-text-secondary">
+                          {experience.responsibilities.map(
+                            (responsibility, index) => (
+                              <li
+                                key={index}
+                                className="flex items-start gap-2"
+                              >
+                                <span
+                                  className={
+                                    experience.accentColor === "cyan-400"
+                                      ? "text-cyan-400 mt-1"
+                                      : experience.accentColor === "purple-400"
+                                      ? "text-purple-400 mt-1"
+                                      : experience.accentColor === "green-400"
+                                      ? "text-green-400 mt-1"
+                                      : "mt-1"
+                                  }
+                                >
+                                  ▹
+                                </span>
+                                <span>{responsibility}</span>
+                              </li>
+                            )
+                          )}
+                        </ul>
+
+                        <div className="flex flex-wrap gap-2">
+                          {experience.tags.map((tag) => (
+                            <span
+                              key={tag.label}
+                              className="px-3 py-1.5 rounded-lg text-xs font-medium"
+                              style={{
+                                backgroundColor: `${tag.color}1A`,
+                                color: tag.color,
+                                border: `1px solid ${tag.color}33`,
+                              }}
+                            >
+                              {tag.label}
+                            </span>
+                          ))}
                         </div>
                       </div>
-
-                      <ul className="space-y-3 mb-6 text-text-secondary">
-                        {experience.responsibilities.map(
-                          (responsibility, index) => (
-                            <li key={index} className="flex items-start gap-2">
-                              <span
-                                className={
-                                  experience.accentColor === "cyan-400"
-                                    ? "text-cyan-400 mt-1"
-                                    : experience.accentColor === "purple-400"
-                                    ? "text-purple-400 mt-1"
-                                    : experience.accentColor === "green-400"
-                                    ? "text-green-400 mt-1"
-                                    : "mt-1"
-                                }
-                              >
-                                ▹
-                              </span>
-                              <span>{responsibility}</span>
-                            </li>
-                          )
-                        )}
-                      </ul>
-
-                      <div className="flex flex-wrap gap-2">
-                        {experience.tags.map((tag) => (
-                          <span
-                            key={tag.label}
-                            className="px-3 py-1.5 rounded-lg text-xs font-medium"
-                            style={{
-                              backgroundColor: `${tag.color}1A`,
-                              color: tag.color,
-                              border: `1px solid ${tag.color}33`,
-                            }}
+                    </a>
+                  ) : (
+                    <div className="group relative overflow-hidden rounded-2xl border border-border bg-bg-surface hover:border-accent-primary transition-all duration-500">
+                      <div className="relative p-8 md:p-10">
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                          <div>
+                            <h3
+                              className={
+                                experience.accentColor === "cyan-400"
+                                  ? "text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors"
+                                  : experience.accentColor === "purple-400"
+                                  ? "text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors"
+                                  : experience.accentColor === "green-400"
+                                  ? "text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors"
+                                  : "text-2xl md:text-3xl font-bold transition-colors"
+                              }
+                            >
+                              {experience.title}
+                            </h3>
+                            <p className="text-text-secondary text-lg mt-1">
+                              {experience.company}
+                            </p>
+                          </div>
+                          <div
+                            className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace(
+                              "-400",
+                              "-500"
+                            )}/10 text-${
+                              experience.accentColor
+                            } border border-${experience.accentColor.replace(
+                              "-400",
+                              "-500"
+                            )}/20 rounded-lg text-sm font-medium`}
                           >
-                            {tag.label}
-                          </span>
-                        ))}
+                            {experience.period}
+                          </div>
+                        </div>
+
+                        <ul className="space-y-3 mb-6 text-text-secondary">
+                          {experience.responsibilities.map(
+                            (responsibility, index) => (
+                              <li
+                                key={index}
+                                className="flex items-start gap-2"
+                              >
+                                <span
+                                  className={
+                                    experience.accentColor === "cyan-400"
+                                      ? "text-cyan-400 mt-1"
+                                      : experience.accentColor === "purple-400"
+                                      ? "text-purple-400 mt-1"
+                                      : experience.accentColor === "green-400"
+                                      ? "text-green-400 mt-1"
+                                      : "mt-1"
+                                  }
+                                >
+                                  ▹
+                                </span>
+                                <span>{responsibility}</span>
+                              </li>
+                            )
+                          )}
+                        </ul>
+
+                        <div className="flex flex-wrap gap-2">
+                          {experience.tags.map((tag) => (
+                            <span
+                              key={tag.label}
+                              className="px-3 py-1.5 rounded-lg text-xs font-medium"
+                              style={{
+                                backgroundColor: `${tag.color}1A`,
+                                color: tag.color,
+                                border: `1px solid ${tag.color}33`,
+                              }}
+                            >
+                              {tag.label}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
