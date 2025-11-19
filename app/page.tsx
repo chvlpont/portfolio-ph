@@ -56,6 +56,27 @@ const Portfolio = () => {
 
   const projects = [
     {
+      name: "Kanbai",
+      url: "https://kanbai-web.vercel.app/",
+      image: "/kanbai-screenshot.png",
+      description: "AI-powered kanban board managed by natural conversation.",
+      gradient: {
+        from: "blue-500",
+        to: "purple-500",
+      },
+      hoverColor: "blue-400",
+      tags: [
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Supabase", color: "#22c55e" },
+        { label: "PostgreSQL", color: "#3b82f6" },
+        { label: "Framer Motion", color: "#ec4899" },
+        { label: "Tailwind", color: "#06b6d4" },
+        { label: "WebSockets", color: "#a855f7" },
+        { label: "Groq", color: "#f97316" },
+      ],
+    },
+    {
       name: "TypeSprint",
       url: "https://typesprint-web.vercel.app/",
       image: "/typesprint-screenshot.png",
