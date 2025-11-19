@@ -40,6 +40,18 @@ if (typeof window !== "undefined") {
   document.head.appendChild(fontLink);
 }
 
+// Helper function to convert Tailwind color names to hex
+const getTailwindColor = (colorName: string) => {
+  const colorMap: { [key: string]: string } = {
+    "cyan-500": "#06b6d4",
+    "blue-500": "#3b82f6",
+    "purple-500": "#a855f7",
+    "pink-500": "#ec4899",
+    "green-500": "#22c55e",
+  };
+  return colorMap[colorName] || "#3b82f6"; // fallback to blue
+};
+
 const Portfolio = () => {
   useScrollAnimation();
   const [isMobile, setIsMobile] = React.useState(false);
@@ -670,10 +682,24 @@ const Portfolio = () => {
                 <div key={experience.company} className="relative">
                   <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
                     <div
-                      className={`absolute inset-0 bg-linear-to-br from-${experience.gradient.from}/5 via-transparent to-${experience.gradient.to}/5 pointer-events-none`}
+                      className="absolute inset-0 pointer-events-none"
+                      style={{
+                        background: `linear-gradient(135deg, ${getTailwindColor(
+                          experience.gradient.from
+                        )}33, transparent, ${getTailwindColor(
+                          experience.gradient.to
+                        )}1A)`,
+                      }}
                     ></div>
                     <div
-                      className={`absolute inset-0 bg-linear-to-br from-${experience.gradient.from}/10 via-transparent to-${experience.gradient.to}/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                      style={{
+                        background: `linear-gradient(135deg, ${getTailwindColor(
+                          experience.gradient.from
+                        )}4D, transparent, ${getTailwindColor(
+                          experience.gradient.to
+                        )}2A)`,
+                      }}
                     ></div>
 
                     <div className="relative p-8 md:p-10">
