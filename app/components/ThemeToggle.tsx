@@ -32,14 +32,7 @@ export default function ThemeToggle() {
         backgroundColor: "var(--bg-surface)",
         borderColor: "var(--border)",
         color: "var(--text-primary)",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.backgroundColor = "var(--bg-muted)";
-        e.currentTarget.style.borderColor = "var(--accent-primary)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = "var(--bg-surface)";
-        e.currentTarget.style.borderColor = "var(--border)";
+        WebkitTapHighlightColor: "transparent",
       }}
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
