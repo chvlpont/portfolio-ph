@@ -30,6 +30,7 @@ import ParticleBackground from "./components/ParticleBackground";
 import StockholmClock from "./components/StockholmClock";
 import GitHubCalendar from "react-github-calendar";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
+import ThemeToggle from "./components/ThemeToggle";
 
 // Add Google Fonts link for Fira Code
 if (typeof window !== "undefined") {
@@ -40,21 +41,10 @@ if (typeof window !== "undefined") {
   document.head.appendChild(fontLink);
 }
 
-// Helper function to convert Tailwind color names to hex
-const getTailwindColor = (colorName: string) => {
-  const colorMap: { [key: string]: string } = {
-    "cyan-500": "#06b6d4",
-    "blue-500": "#3b82f6",
-    "purple-500": "#a855f7",
-    "pink-500": "#ec4899",
-    "green-500": "#22c55e",
-  };
-  return colorMap[colorName] || "#3b82f6"; // fallback to blue
-};
-
 const Portfolio = () => {
   useScrollAnimation();
   const [isMobile, setIsMobile] = React.useState(false);
+  const [theme, setTheme] = React.useState<"light" | "dark">("light");
 
   React.useEffect(() => {
     const checkMobile = () => {
@@ -64,6 +54,26 @@ const Portfolio = () => {
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  React.useEffect(() => {
+    const updateTheme = () => {
+      const currentTheme =
+        (document.documentElement.getAttribute("data-theme") as
+          | "light"
+          | "dark") || "light";
+      setTheme(currentTheme);
+    };
+
+    updateTheme();
+
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const projects = [
@@ -265,7 +275,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#010409] text-white">
+    <div className="min-h-screen bg-bg-primary text-text-primary">
       <ParticleBackground />
       <div className="relative z-10">
         {/* Skip to main content */}
@@ -277,14 +287,14 @@ const Portfolio = () => {
         </a>
 
         {/* Header Navigation */}
-        <header className="border-b border-white/20">
+        <header className="border-b border-border">
           <nav className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <StockholmClock />
               <div className="flex items-center gap-6">
                 <a
                   href="/resume.pdf"
-                  className="hover:text-gray-200 transition-colors flex items-center gap-2"
+                  className="hover:text-text-secondary transition-colors flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -293,13 +303,14 @@ const Portfolio = () => {
                 </a>
                 <a
                   href="https://github.com/chvlpont"
-                  className="hover:text-gray-200 transition-colors flex items-center gap-2"
+                  className="hover:text-text-secondary transition-colors flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Github size={20} />
                   <span className="hidden md:inline">GitHub</span>
                 </a>
+                <ThemeToggle />
               </div>
             </div>
           </nav>
@@ -347,7 +358,7 @@ const Portfolio = () => {
                 </h1>
 
                 {/* Tagline */}
-                <p className="text-xl text-gray-200 text-center mb-8 max-w-lg mx-auto">
+                <p className="text-xl text-text-secondary text-center mb-8 max-w-lg mx-auto">
                   I build{" "}
                   <span style={{ color: "#32CD30" }} className="font-semibold">
                     modern web solutions
@@ -366,7 +377,7 @@ const Portfolio = () => {
                   </a>
                   <a
                     href="#contact"
-                    className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                    className="px-6 py-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 text-text-primary font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                   >
                     Get in Touch
                   </a>
@@ -378,7 +389,7 @@ const Portfolio = () => {
                     href="https://github.com/chvlpont"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 rounded-lg transition-all duration-300 hover:scale-110"
+                    className="p-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 rounded-lg transition-all duration-300 hover:scale-110"
                     aria-label="GitHub"
                   >
                     <Github size={24} />
@@ -387,7 +398,7 @@ const Portfolio = () => {
                     href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 rounded-lg transition-all duration-300 hover:scale-110"
+                    className="p-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 rounded-lg transition-all duration-300 hover:scale-110"
                     aria-label="Resume"
                   >
                     <FileText size={24} />
@@ -397,7 +408,7 @@ const Portfolio = () => {
 
               {/* Right side - Profile Image */}
               <div className="flex-1 flex justify-center md:justify-end">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-[#161b22] overflow-hidden">
+                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-border overflow-hidden">
                   <img
                     src="https://media.licdn.com/dms/image/v2/D4D03AQGMiTPLTp2Yog/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709338866147?e=1764806400&v=beta&t=NGiGgY3l82efPdeFOftUqvtNNTU2WEH5RS6ZlTGdppc"
                     alt="Profile"
@@ -418,7 +429,7 @@ const Portfolio = () => {
             </h2>
 
             <div className="max-w-6xl mx-auto space-y-6">
-              <p className="text-xl leading-relaxed font-medium text-gray-200">
+              <p className="text-xl leading-relaxed font-medium text-text-secondary">
                 I am{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   Pontus Hogler
@@ -430,7 +441,7 @@ const Portfolio = () => {
                 , where I build modern web solutions and AI products.
               </p>
 
-              <p className="text-xl leading-relaxed font-medium text-gray-200">
+              <p className="text-xl leading-relaxed font-medium text-text-secondary">
                 I specialize in{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   TypeScript
@@ -447,7 +458,7 @@ const Portfolio = () => {
                 PostgreSQL.
               </p>
 
-              <p className="text-xl leading-relaxed font-medium text-gray-200">
+              <p className="text-xl leading-relaxed font-medium text-text-secondary">
                 I'm passionate about creating{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   seamless user experiences
@@ -460,7 +471,7 @@ const Portfolio = () => {
                 having worked on VR training simulations.
               </p>
 
-              <p className="text-xl leading-relaxed font-medium text-gray-200">
+              <p className="text-xl leading-relaxed font-medium text-text-secondary">
                 I love making{" "}
                 <span style={{ color: "#32CD30" }} className="font-semibold">
                   side projects
@@ -477,13 +488,15 @@ const Portfolio = () => {
               <div className="flex flex-col items-center mb-8">
                 <div className="text-center mb-4">
                   <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
-                  <p className="text-gray-200">My contributions in 2025</p>
+                  <p className="text-text-secondary">
+                    My contributions in 2025
+                  </p>
                 </div>
                 <a
                   href="https://github.com/chvlpont"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/50 transition-all duration-300"
+                  className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green transition-all duration-300"
                 >
                   <Github
                     size={20}
@@ -498,10 +511,17 @@ const Portfolio = () => {
                   <div className="scale-[0.96] origin-top transition-transform">
                     <GitHubCalendar
                       username="chvlpont"
-                      colorScheme="dark"
+                      colorScheme={theme}
                       blockSize={18}
                       fontSize={16}
                       theme={{
+                        light: [
+                          "#ebedf0",
+                          "#9be9a8",
+                          "#40c463",
+                          "#30a14e",
+                          "#216e39",
+                        ],
                         dark: [
                           "#161b22",
                           "#0e4429",
@@ -516,10 +536,17 @@ const Portfolio = () => {
                   <div className="w-full [&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
                     <GitHubCalendar
                       username="chvlpont"
-                      colorScheme="dark"
+                      colorScheme={theme}
                       blockSize={10}
                       fontSize={10}
                       theme={{
+                        light: [
+                          "#ebedf0",
+                          "#9be9a8",
+                          "#40c463",
+                          "#30a14e",
+                          "#216e39",
+                        ],
                         dark: [
                           "#161b22",
                           "#0e4429",
@@ -540,7 +567,7 @@ const Portfolio = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Featured Projects
             </h2>
-            <p className="text-xl text-gray-200 mb-12 text-center">
+            <p className="text-xl text-text-secondary mb-12 text-center">
               Some things I've built recently
             </p>
 
@@ -551,7 +578,7 @@ const Portfolio = () => {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block group relative overflow-hidden rounded-xl bg-linear-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
+                  className="block group relative overflow-hidden rounded-xl bg-bg-surface border border-border hover:border-accent-primary hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
                 >
                   {/* Project Image - Large, no border */}
                   <div className="relative w-full aspect-16/10 overflow-hidden">
@@ -587,7 +614,7 @@ const Portfolio = () => {
                       {project.name}
                     </h3>
 
-                    <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-2">
                       {project.description}
                     </p>
 
@@ -617,7 +644,7 @@ const Portfolio = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">
               The Secret Recipe
             </h2>
-            <p className="text-xl text-gray-200 mb-12 text-center">
+            <p className="text-xl text-text-secondary mb-12 text-center">
               Technologies and tools I use to bring ideas to life.
             </p>
 
@@ -631,7 +658,7 @@ const Portfolio = () => {
                   }}
                 >
                   {/* Card content */}
-                  <div className="relative rounded-xl p-5 bg-linear-to-br from-white/5 via-transparent to-transparent border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden">
+                  <div className="relative rounded-xl p-5 bg-bg-surface border border-border hover:border-accent-primary transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden">
                     {/* Subtle background gradient */}
                     <div
                       className="absolute inset-0 pointer-events-none"
@@ -673,35 +700,14 @@ const Portfolio = () => {
           {/* Experience Section with Timeline */}
           <section className="relative mt-24">
             <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
-            <p className="text-xl text-gray-200 mb-12 text-center">
+            <p className="text-xl text-text-secondary mb-12 text-center">
               My journey in tech
             </p>
 
             <div className="space-y-8">
               {experiences.map((experience) => (
                 <div key={experience.company} className="relative">
-                  <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/5 via-transparent to-transparent hover:border-white/20 transition-all duration-500">
-                    <div
-                      className="absolute inset-0 pointer-events-none"
-                      style={{
-                        background: `linear-gradient(135deg, ${getTailwindColor(
-                          experience.gradient.from
-                        )}33, transparent, ${getTailwindColor(
-                          experience.gradient.to
-                        )}1A)`,
-                      }}
-                    ></div>
-                    <div
-                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                      style={{
-                        background: `linear-gradient(135deg, ${getTailwindColor(
-                          experience.gradient.from
-                        )}4D, transparent, ${getTailwindColor(
-                          experience.gradient.to
-                        )}2A)`,
-                      }}
-                    ></div>
-
+                  <div className="group relative overflow-hidden rounded-2xl border border-border bg-bg-surface hover:border-accent-primary transition-all duration-500">
                     <div className="relative p-8 md:p-10">
                       <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                         <div>
@@ -718,7 +724,7 @@ const Portfolio = () => {
                           >
                             {experience.title}
                           </h3>
-                          <p className="text-gray-200 text-lg mt-1">
+                          <p className="text-text-secondary text-lg mt-1">
                             {experience.company}
                           </p>
                         </div>
@@ -737,7 +743,7 @@ const Portfolio = () => {
                         </div>
                       </div>
 
-                      <ul className="space-y-3 mb-6 text-gray-200">
+                      <ul className="space-y-3 mb-6 text-text-secondary">
                         {experience.responsibilities.map(
                           (responsibility, index) => (
                             <li key={index} className="flex items-start gap-2">
@@ -787,12 +793,12 @@ const Portfolio = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">
               Get In Touch
             </h2>
-            <p className="text-xl text-gray-200 mb-12 text-center">
+            <p className="text-xl text-text-secondary mb-12 text-center">
               Have a question or want to work together?
             </p>
 
             <div className="max-w-2xl mx-auto">
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/5 via-transparent to-transparent p-8 md:p-10">
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-bg-surface p-8 md:p-10">
                 {/* Background gradient effect */}
                 <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
 
@@ -834,7 +840,7 @@ const Portfolio = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium mb-2 text-gray-200"
+                      className="block text-sm font-medium mb-2 text-text-secondary"
                     >
                       Name
                     </label>
@@ -843,7 +849,7 @@ const Portfolio = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 bg-[#161b22] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
+                      className="w-full px-4 py-3 bg-bg-surface border border-border rounded-lg focus:outline-none focus:border-accent-primary/50 focus:ring-2 focus:ring-accent-primary/20 transition-all duration-300 text-text-primary placeholder-text-secondary"
                       placeholder="Your name"
                     />
                   </div>
@@ -851,7 +857,7 @@ const Portfolio = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium mb-2 text-gray-200"
+                      className="block text-sm font-medium mb-2 text-text-secondary"
                     >
                       Email
                     </label>
@@ -860,7 +866,7 @@ const Portfolio = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-[#161b22] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500"
+                      className="w-full px-4 py-3 bg-bg-surface border border-border rounded-lg focus:outline-none focus:border-accent-primary/50 focus:ring-2 focus:ring-accent-primary/20 transition-all duration-300 text-text-primary placeholder-text-secondary"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -868,7 +874,7 @@ const Portfolio = () => {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium mb-2 text-gray-200"
+                      className="block text-sm font-medium mb-2 text-text-secondary"
                     >
                       Message
                     </label>
@@ -877,7 +883,7 @@ const Portfolio = () => {
                       name="message"
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-[#161b22] border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300 text-white placeholder-gray-500 resize-none"
+                      className="w-full px-4 py-3 bg-bg-surface border border-border rounded-lg focus:outline-none focus:border-accent-primary/50 focus:ring-2 focus:ring-accent-primary/20 transition-all duration-300 text-text-primary placeholder-text-secondary resize-none"
                       placeholder="Your message..."
                     ></textarea>
                   </div>
@@ -896,8 +902,8 @@ const Portfolio = () => {
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-white/20 mt-24">
-          <div className="max-w-7xl mx-auto px-6 py-8 text-center text-gray-200">
+        <footer className="border-t border-border mt-24">
+          <div className="max-w-7xl mx-auto px-6 py-8 text-center text-text-secondary">
             <p>© 2025 Your Name. All rights reserved.</p>
           </div>
         </footer>

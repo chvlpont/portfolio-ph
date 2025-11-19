@@ -17,20 +17,95 @@ h6 {
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Light theme variables */
+  --bg-primary: #ffffff;
+  --bg-surface: #f8fafc;
+  --bg-muted: #f1f5f9;
+  --border: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --accent-primary: #3b82f6;
+  --accent-primary-hover: #2563eb;
+  --accent-primary-bg: rgba(59, 130, 246, 0.1);
+  --accent-primary-light: #dbeafe;
+  --accent-purple: #8b5cf6;
+  --accent-green: #22c55e;
+  --accent-yellow: #eab308;
+  --accent-orange: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-cyan: #06b6d4;
+  --hover-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  --dot-blue: #3b82f6;
+  --dot-green: #22c55e;
+  --dot-orange: #f97316;
+  --dot-purple: #8b5cf6;
+  --dot-rose: #f43f5e;
+}
+
+[data-theme="dark"] {
+  /* Dark theme variables - Improved Premium Dark Mode */
+  --bg-primary: #0d1117; /* slightly brighter, clean backdrop */
+  --bg-surface: #161b22; /* card/column (kept but improved contrast) */
+  --bg-muted: #1e2633; /* smoother than #253042 */
+  --border: #30363d; /* GitHub-style soft border */
+
+  --text-primary: #f8fafc; /* bright but not harsh */
+  --text-secondary: #94a3b8;
+
+  --shadow: rgba(0, 0, 0, 0.4); /* deeper, more realistic shadow */
+
+  /* Accents */
+  --accent-primary: #3b82f6;
+  --accent-primary-hover: #1d4ed8;
+  --accent-primary-bg: rgba(59, 130, 246, 0.12);
+  --accent-primary-light: #93c5fd;
+
+  /* Status */
+  --accent-purple: #a78bfa;
+  --accent-green: #22c55e;
+  --accent-yellow: #eab308;
+  --accent-orange: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-cyan: #06b6d4;
+
+  /* Hover shadows */
+  --hover-shadow: 0 0 18px rgba(255, 255, 255, 0.04);
+
+  /* Dots */
+  --dot-blue: #3b82f6;
+  --dot-green: #22c55e;
+  --dot-orange: #f97316;
+  --dot-purple: #8b5cf6;
+  --dot-rose: #f43f5e;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-muted: var(--bg-muted);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-primary-hover: var(--accent-primary-hover);
+  --color-accent-primary-bg: var(--accent-primary-bg);
+  --color-accent-primary-light: var(--accent-primary-light);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-green: var(--accent-green);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-red: var(--accent-red);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-dot-blue: var(--dot-blue);
+  --color-dot-green: var(--dot-green);
+  --color-dot-orange: var(--dot-orange);
+  --color-dot-purple: var(--dot-purple);
+  --color-dot-rose: var(--dot-rose);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html {
@@ -38,8 +113,8 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-primary);
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
 }
 
