@@ -461,7 +461,7 @@ const Portfolio = () => {
 
           {/* GitHub Contributions Section */}
           <section className="mt-24">
-            <div className="p-8 md:p-10">
+            <div className={isMobile ? "py-8" : "p-8 md:p-10"}>
               <div className="flex flex-col items-center mb-8">
                 <div className="text-center mb-4">
                   <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
@@ -481,13 +481,7 @@ const Portfolio = () => {
                 </a>
               </div>
 
-              <div
-                className={`w-full flex justify-center ${
-                  isMobile
-                    ? "[&>article]:!max-w-full [&_svg]:!max-w-full [&_svg]:!w-full [&_svg]:!h-auto"
-                    : ""
-                }`}
-              >
+              <div className="w-full flex justify-center">
                 {!isMobile ? (
                   <div className="scale-[0.96] origin-top transition-transform">
                     <GitHubCalendar
@@ -507,21 +501,23 @@ const Portfolio = () => {
                     />
                   </div>
                 ) : (
-                  <GitHubCalendar
-                    username="chvlpont"
-                    colorScheme="dark"
-                    blockSize={15}
-                    fontSize={14}
-                    theme={{
-                      dark: [
-                        "#161b22",
-                        "#0e4429",
-                        "#006d32",
-                        "#26a641",
-                        "#39d353",
-                      ],
-                    }}
-                  />
+                  <div className="w-full [&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
+                    <GitHubCalendar
+                      username="chvlpont"
+                      colorScheme="dark"
+                      blockSize={10}
+                      fontSize={10}
+                      theme={{
+                        dark: [
+                          "#161b22",
+                          "#0e4429",
+                          "#006d32",
+                          "#26a641",
+                          "#39d353",
+                        ],
+                      }}
+                    />
+                  </div>
                 )}
               </div>
             </div>
