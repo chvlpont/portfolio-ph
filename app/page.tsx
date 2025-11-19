@@ -23,6 +23,9 @@ import {
   SiSass,
   SiFirebase,
   SiAuth0,
+  SiSupabase,
+  SiSignal,
+  SiPostgresql,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { TypeAnimation } from "react-type-animation";
@@ -261,6 +264,7 @@ const Portfolio = () => {
     { name: "Git", icon: SiGit, color: "#ea580c" },
     { name: "Tailwind", icon: SiTailwindcss, color: "#22d3ee" },
     { name: "MongoDB", icon: SiMongodb, color: "#16a34a" },
+    { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
     { name: "Redux", icon: SiRedux, color: "#9333ea" },
     { name: "Express", icon: SiExpress, color: "#9ca3af" },
     { name: "Framer Motion", icon: SiFramer, color: "#ec4899" },
@@ -270,6 +274,8 @@ const Portfolio = () => {
     { name: "Figma", icon: SiFigma, color: "#ef4444" },
     { name: "SCSS", icon: SiSass, color: "#db2777" },
     { name: "Firebase", icon: SiFirebase, color: "#ca8a04" },
+    { name: "Supabase", icon: SiSupabase, color: "#3ecf8e" },
+    { name: "WebSockets", icon: SiSignal, color: "#a855f7" },
     { name: "Clerk", icon: SiAuth0, color: "#6366f1" },
     { name: "Context", icon: SiReact, color: "#14b8a6" },
   ];
