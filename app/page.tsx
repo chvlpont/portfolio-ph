@@ -84,7 +84,8 @@ const Portfolio = () => {
       name: "Kanbai",
       url: "https://kanbai-web.vercel.app/",
       image: "/kanbai-screenshot.png",
-      description: "AI-powered kanban board managed by natural conversation.",
+      description:
+        "AI-powered kanban board managed through natural conversation in real-time.",
       gradient: {
         from: "blue-500",
         to: "purple-500",
@@ -98,6 +99,7 @@ const Portfolio = () => {
         { label: "Framer Motion", color: "#ec4899" },
         { label: "Tailwind", color: "#06b6d4" },
         { label: "WebSockets", color: "#a855f7" },
+        { label: "DnD", color: "#8b5cf6" },
         { label: "Groq", color: "#f97316" },
       ],
     },
@@ -106,7 +108,7 @@ const Portfolio = () => {
       url: "https://typesprint-web.vercel.app/",
       image: "/typesprint-screenshot.png",
       description:
-        "Multiplayer typing game with solo practice mode created with Websockets.",
+        "Real-time multiplayer typing game with solo practice mode, powered by WebSockets.",
       gradient: {
         from: "green-500",
         to: "emerald-500",
@@ -124,8 +126,7 @@ const Portfolio = () => {
       name: "Imageidentifier",
       url: "https://imageidentifier.ai",
       image: "/imageidentifier-screenshot.png",
-      description:
-        "AI-powered image identification with real-time processing and object recognition.",
+      description: "AI-powered image identification and object recognition.",
       gradient: {
         from: "cyan-500",
         to: "purple-500",
@@ -154,6 +155,7 @@ const Portfolio = () => {
         { label: "TypeScript", color: "#3b82f6" },
         { label: "Supabase", color: "#22c55e" },
         { label: "Tailwind", color: "#06b6d4" },
+        { label: "NextAuth", color: "#3b82f6" },
       ],
     },
     {
@@ -161,7 +163,7 @@ const Portfolio = () => {
       url: "https://aquafix.se",
       image: "/aquafix-screenshot.png",
       description:
-        "Cleaning services specializing in roof, facade, and gutter cleaning.",
+        "Professional cleaning services specializing in roofs, facades, and gutters.",
       gradient: {
         from: "blue-500",
         to: "green-500",
@@ -622,7 +624,7 @@ const Portfolio = () => {
                       {project.name}
                     </h3>
 
-                    <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-2">
+                    <p className="text-text-secondary text-sm leading-relaxed mb-4">
                       {project.description}
                     </p>
 
