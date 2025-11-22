@@ -249,7 +249,7 @@ const Portfolio = () => {
         { label: "PostgreSQL", color: "#3b82f6" },
         { label: "Supabase", color: "#22c55e" },
         { label: "Prisma", color: "#a855f7" },
-        { label: "Tailwind CSS", color: "#06b6d4" },
+        { label: "Tailwind", color: "#06b6d4" },
       ],
     },
     {
