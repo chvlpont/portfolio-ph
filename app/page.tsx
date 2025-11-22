@@ -81,6 +81,28 @@ const Portfolio = () => {
 
   const projects = [
     {
+      name: "FlowAI",
+      url: "https://flowai-inky.vercel.app/",
+      image: "/flowai-screenshot.png",
+      description:
+        "AI-powered whiteboard collaboration tool for real-time brainstorming and visual thinking.",
+      gradient: {
+        from: "indigo-500",
+        to: "cyan-500",
+      },
+      hoverColor: "indigo-400",
+      tags: [
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Supabase", color: "#22c55e" },
+        { label: "PostgreSQL", color: "#3b82f6" },
+        { label: "Tailwind", color: "#06b6d4" },
+        { label: "WebSockets", color: "#a855f7" },
+        { label: "DnD", color: "#8b5cf6" },
+        { label: "Groq", color: "#f97316" },
+      ],
+    },
+    {
       name: "Kanbai",
       url: "https://kanbai-web.vercel.app/",
       image: "/kanbai-screenshot.png",
@@ -618,6 +640,8 @@ const Portfolio = () => {
                           ? "text-lg font-bold group-hover:text-purple-400 transition-colors mb-2"
                           : project.hoverColor === "blue-400"
                           ? "text-lg font-bold group-hover:text-blue-400 transition-colors mb-2"
+                          : project.hoverColor === "indigo-400"
+                          ? "text-lg font-bold group-hover:text-indigo-400 transition-colors mb-2"
                           : "text-lg font-bold transition-colors mb-2"
                       }
                     >
