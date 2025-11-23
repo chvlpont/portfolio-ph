@@ -142,7 +142,6 @@ const Portfolio = () => {
         from: "green-500",
         to: "emerald-500",
       },
-      hoverColor: "emerald-400",
       tags: [
         { label: "Next.js", color: "#6b7280" },
         { label: "TypeScript", color: "#3b82f6" },
@@ -600,33 +599,13 @@ const Portfolio = () => {
                     <img
                       src={project.image}
                       alt={`${project.name} Screenshot`}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
-                    {/* Gradient overlay on hover */}
-                    <div
-                      className={`absolute inset-0 bg-linear-to-t from-${project.gradient.from}/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                    ></div>
                   </div>
 
                   {/* Project Info */}
                   <div className="p-5 flex flex-col">
-                    <h3
-                      className={
-                        project.hoverColor === "emerald-400"
-                          ? "text-lg font-bold group-hover:text-emerald-400 transition-colors mb-2"
-                          : project.hoverColor === "cyan-400"
-                          ? "text-lg font-bold group-hover:text-cyan-400 transition-colors mb-2"
-                          : project.hoverColor === "purple-400"
-                          ? "text-lg font-bold group-hover:text-purple-400 transition-colors mb-2"
-                          : project.hoverColor === "blue-400"
-                          ? "text-lg font-bold group-hover:text-blue-400 transition-colors mb-2"
-                          : project.hoverColor === "indigo-400"
-                          ? "text-lg font-bold group-hover:text-indigo-400 transition-colors mb-2"
-                          : "text-lg font-bold transition-colors mb-2"
-                      }
-                    >
-                      {project.name}
-                    </h3>
+                    <h3 className="text-lg font-bold mb-2">{project.name}</h3>
 
                     <p className="text-text-secondary text-sm leading-relaxed mb-4">
                       {project.description}
@@ -677,16 +656,14 @@ const Portfolio = () => {
                   >
                     <project.icon
                       size={80}
-                      className="text-accent-primary opacity-80 group-hover:scale-110 transition-transform duration-300"
+                      className="text-accent-primary opacity-80"
                       strokeWidth={1.5}
                     />
                   </div>
 
                   {/* Project Info */}
                   <div className="p-5 flex flex-col">
-                    <h3 className="text-lg font-bold group-hover:text-accent-primary transition-colors mb-2">
-                      {project.name}
-                    </h3>
+                    <h3 className="text-lg font-bold mb-2">{project.name}</h3>
 
                     <p className="text-text-secondary text-sm leading-relaxed mb-4">
                       {project.description}
