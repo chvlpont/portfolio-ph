@@ -409,244 +409,167 @@ const Portfolio = () => {
         <main id="main" className="max-w-7xl mx-auto px-6">
           {/* Hero Section */}
           <section className="min-h-[calc(100vh-80px)] flex items-center justify-center">
-            <div className="flex flex-col md:flex-row items-center justify-center w-full gap-12">
-              {/* Left side - Text */}
-              <div className="flex-1">
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 min-h-[1.2em] text-center">
-                  <span
-                    className="block leading-relaxed"
-                    style={{
-                      fontFamily: '"Fira Code", monospace',
-                      fontSize: "35px",
-                    }}
-                  >
-                    HI
-                    <br />
-                    I'M{" "}
-                    <span style={{ color: "#32CD30", whiteSpace: "nowrap" }}>
-                      PONTUS HOGLER
-                    </span>
-                    <br />
-                    <TypeAnimation
-                      sequence={[
-                        "Curious Learner",
-                        2000,
-                        "Problem Solver",
-                        2000,
-                        "Builder",
-                        2000,
-                        "Web Developer",
-                        2000,
-                      ]}
-                      wrapper="span"
-                      speed={20}
-                      repeat={Infinity}
-                      cursor={true}
+            <div className="flex flex-col items-center justify-center w-full gap-40">
+              {/* Top Row - Text and Profile */}
+              <div className="flex flex-col md:flex-row items-center justify-center w-full gap-33 max-w-5xl mx-auto">
+                {/* Right side - Profile Image (mobile first) */}
+                <div className="flex justify-center order-1 md:order-2 mt-16 md:mt-0">
+                  <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-border overflow-hidden">
+                    <img
+                      src="https://media.licdn.com/dms/image/v2/D4D03AQGMiTPLTp2Yog/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709338866147?e=1764806400&v=beta&t=NGiGgY3l82efPdeFOftUqvtNNTU2WEH5RS6ZlTGdppc"
+                      alt="Profile"
+                      className="w-full h-full object-cover"
                     />
-                  </span>
-                </h1>
-
-                {/* Tagline */}
-                <p className="text-xl text-text-secondary text-center mb-8 max-w-lg mx-auto">
-                  I build{" "}
-                  <span style={{ color: "#32CD30" }} className="font-semibold">
-                    modern web solutions
-                  </span>{" "}
-                  with TypeScript, Next.js, and Tailwind CSS
-                </p>
-
-                {/* CTA Buttons */}
-                <div className="flex items-center justify-center gap-4 flex-wrap">
-                  <a
-                    href="#projects"
-                    style={{ backgroundColor: "rgba(50, 205, 48, 0.6)" }}
-                    className="px-6 py-3 hover:bg-opacity-90 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    View Projects
-                  </a>
-                  <a
-                    href="#contact"
-                    className="px-6 py-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 text-text-primary font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    Get in Touch
-                  </a>
+                  </div>
                 </div>
 
-                {/* Social Links */}
-                <div className="flex items-center justify-center gap-4 mt-8">
+                {/* Left side - Text */}
+                <div className="order-2 md:order-1">
+                  <h1 className="text-5xl md:text-6xl font-bold mb-6 min-h-[1.2em] text-center">
+                    <span
+                      className="block leading-relaxed"
+                      style={{
+                        fontFamily: '"Fira Code", monospace',
+                        fontSize: "35px",
+                      }}
+                    >
+                      HI
+                      <br />
+                      I'M{" "}
+                      <span style={{ color: "#32CD30", whiteSpace: "nowrap" }}>
+                        PONTUS HOGLER
+                      </span>
+                      <br />
+                      <TypeAnimation
+                        sequence={[
+                          "Curious Learner",
+                          2000,
+                          "Problem Solver",
+                          2000,
+                          "Builder",
+                          2000,
+                          "Web Developer",
+                          2000,
+                        ]}
+                        wrapper="span"
+                        speed={20}
+                        repeat={Infinity}
+                        cursor={true}
+                      />
+                    </span>
+                  </h1>
+
+                  {/* CTA Buttons */}
+                  <div className="flex items-center justify-center gap-4 flex-wrap">
+                    <a
+                      href="#projects"
+                      style={{ backgroundColor: "rgba(50, 205, 48, 0.6)" }}
+                      className="px-6 py-3 hover:bg-opacity-90 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      View Projects
+                    </a>
+                    <a
+                      href="#contact"
+                      className="px-6 py-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 text-text-primary font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      Get in Touch
+                    </a>
+                  </div>
+
+                  {/* Social Links */}
+                  <div className="flex items-center justify-center gap-4 mt-8">
+                    <a
+                      href="https://github.com/chvlpont"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 rounded-lg transition-all duration-300 hover:scale-110"
+                      aria-label="GitHub"
+                    >
+                      <Github size={24} />
+                    </a>
+                    <a
+                      href="/resume.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 rounded-lg transition-all duration-300 hover:scale-110"
+                      aria-label="Resume"
+                    >
+                      <FileText size={24} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Row - GitHub Activity */}
+              <div className="w-full max-w-5xl">
+                <div className="flex flex-col items-center mb-6 lg:hidden">
                   <a
                     href="https://github.com/chvlpont"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 rounded-lg transition-all duration-300 hover:scale-110"
-                    aria-label="GitHub"
+                    className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green transition-all duration-300"
                   >
-                    <Github size={24} />
-                  </a>
-                  <a
-                    href="/resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 rounded-lg transition-all duration-300 hover:scale-110"
-                    aria-label="Resume"
-                  >
-                    <FileText size={24} />
+                    <Github
+                      size={20}
+                      className="group-hover:text-green-400 transition-colors"
+                    />
+                    <span className="text-sm">GitHub Activity</span>
                   </a>
                 </div>
-              </div>
 
-              {/* Right side - Profile Image */}
-              <div className="flex-1 flex justify-center md:justify-end">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-border overflow-hidden">
-                  <img
-                    src="https://media.licdn.com/dms/image/v2/D4D03AQGMiTPLTp2Yog/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709338866147?e=1764806400&v=beta&t=NGiGgY3l82efPdeFOftUqvtNNTU2WEH5RS6ZlTGdppc"
-                    alt="Profile"
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-full flex justify-center">
+                  {!isMobile ? (
+                    <div className="scale-[1.1] origin-top transition-transform">
+                      <GitHubCalendar
+                        username="chvlpont"
+                        colorScheme={theme}
+                        blockSize={14}
+                        fontSize={12}
+                        theme={{
+                          light: [
+                            "#ebedf0",
+                            "#9be9a8",
+                            "#40c463",
+                            "#30a14e",
+                            "#216e39",
+                          ],
+                          dark: [
+                            "#161b22",
+                            "#0e4429",
+                            "#006d32",
+                            "#26a641",
+                            "#39d353",
+                          ],
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-full [&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
+                      <GitHubCalendar
+                        username="chvlpont"
+                        colorScheme={theme}
+                        blockSize={8}
+                        fontSize={8}
+                        theme={{
+                          light: [
+                            "#ebedf0",
+                            "#9be9a8",
+                            "#40c463",
+                            "#30a14e",
+                            "#216e39",
+                          ],
+                          dark: [
+                            "#161b22",
+                            "#0e4429",
+                            "#006d32",
+                            "#26a641",
+                            "#39d353",
+                          ],
+                        }}
+                      />
+                    </div>
+                  )}
                 </div>
-              </div>
-            </div>
-          </section>
-
-          {/* About Me Section */}
-          <section className="mt-24 mb-34">
-            <h2
-              className="text-3xl font-bold mb-8 text-center"
-              style={{ color: "#32CD30" }}
-            >
-              About Me
-            </h2>
-
-            <div className="max-w-6xl mx-auto space-y-6">
-              <p className="text-xl leading-relaxed font-medium text-text-secondary">
-                I am{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  Pontus Hogler
-                </span>
-                , currently working as a Co-Founder & Fullstack Developer at{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  Webbyro
-                </span>
-                , where I build modern web solutions and AI products.
-              </p>
-
-              <p className="text-xl leading-relaxed font-medium text-text-secondary">
-                I specialize in{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  TypeScript
-                </span>
-                ,{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  Next.js
-                </span>
-                , and{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  Tailwind CSS
-                </span>
-                . My tech stack also includes React, Node.js, Supabase, and
-                PostgreSQL.
-              </p>
-
-              <p className="text-xl leading-relaxed font-medium text-text-secondary">
-                I'm passionate about creating{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  seamless user experiences
-                </span>{" "}
-                and building{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  scalable full-stack applications
-                </span>
-                . I also have experience with XR development in Unity and C#,
-                having worked on VR training simulations.
-              </p>
-
-              <p className="text-xl leading-relaxed font-medium text-text-secondary">
-                I love making{" "}
-                <span style={{ color: "#32CD30" }} className="font-semibold">
-                  side projects
-                </span>{" "}
-                and continuously learning about new technologies to stay at the
-                forefront of web development.
-              </p>
-            </div>
-          </section>
-
-          {/* GitHub Contributions Section */}
-          <section className="mt-24">
-            <div className={isMobile ? "py-8" : "p-8 md:p-10"}>
-              <div className="flex flex-col items-center mb-8">
-                <div className="text-center mb-4">
-                  <h2 className="text-3xl font-bold mb-2">GitHub Activity</h2>
-                  <p className="text-text-secondary">
-                    My contributions in 2025
-                  </p>
-                </div>
-                <a
-                  href="https://github.com/chvlpont"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green transition-all duration-300"
-                >
-                  <Github
-                    size={20}
-                    className="group-hover:text-green-400 transition-colors"
-                  />
-                  <span className="hidden md:inline text-sm">View Profile</span>
-                </a>
-              </div>
-
-              <div className="w-full flex justify-center">
-                {!isMobile ? (
-                  <div className="scale-[0.96] origin-top transition-transform">
-                    <GitHubCalendar
-                      username="chvlpont"
-                      colorScheme={theme}
-                      blockSize={18}
-                      fontSize={16}
-                      theme={{
-                        light: [
-                          "#ebedf0",
-                          "#9be9a8",
-                          "#40c463",
-                          "#30a14e",
-                          "#216e39",
-                        ],
-                        dark: [
-                          "#161b22",
-                          "#0e4429",
-                          "#006d32",
-                          "#26a641",
-                          "#39d353",
-                        ],
-                      }}
-                    />
-                  </div>
-                ) : (
-                  <div className="w-full [&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
-                    <GitHubCalendar
-                      username="chvlpont"
-                      colorScheme={theme}
-                      blockSize={10}
-                      fontSize={10}
-                      theme={{
-                        light: [
-                          "#ebedf0",
-                          "#9be9a8",
-                          "#40c463",
-                          "#30a14e",
-                          "#216e39",
-                        ],
-                        dark: [
-                          "#161b22",
-                          "#0e4429",
-                          "#006d32",
-                          "#26a641",
-                          "#39d353",
-                        ],
-                      }}
-                    />
-                  </div>
-                )}
               </div>
             </div>
           </section>
