@@ -269,7 +269,7 @@ const Portfolio = () => {
 
   const experiences = [
     {
-      title: "Founder & Frontend Developer",
+      title: "Co-Founder & Frontend Developer",
       company: "Image Identifier",
       period: "May 2025 - Present",
       gradient: {
@@ -278,10 +278,11 @@ const Portfolio = () => {
       },
       url: "https://imageidentifier.ai/",
       responsibilities: [
-        "Built AI-powered image identification platform trusted by 278,000+ users",
-        "Achieved 4.8/5 star rating with instant, accurate object recognition",
+        "AI-powered image identification platform trusted by 278,000+ users",
+        "AI analyzes visual features and compares with thousands of patterns in real-time",
         "Implemented privacy-first architecture with no data storage or sharing",
-        "Developed fast, user-friendly interface supporting JPG, PNG, WEBP, and HEIC formats",
+        "Delivers accurate identification instantly with confidence scores and related information",
+        "Built alongside my brother and a friend",
       ],
       tags: [
         { label: "Next.js", color: "#6b7280" },
