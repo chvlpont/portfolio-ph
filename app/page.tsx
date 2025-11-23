@@ -550,7 +550,7 @@ const Portfolio = () => {
                       />
                     </div>
                   ) : (
-                    <div className="w-full [&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
+                    <div className="w-full mb-16 [&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
                       <GitHubCalendar
                         username="chvlpont"
                         colorScheme={theme}
