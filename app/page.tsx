@@ -508,21 +508,6 @@ const Portfolio = () => {
 
               {/* Bottom Row - GitHub Activity */}
               <div className="w-full max-w-5xl">
-                <div className="flex flex-col items-center mb-6 lg:hidden">
-                  <a
-                    href="https://github.com/chvlpont"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green transition-all duration-300"
-                  >
-                    <Github
-                      size={20}
-                      className="group-hover:text-green-400 transition-colors"
-                    />
-                    <span className="text-sm">GitHub Activity</span>
-                  </a>
-                </div>
-
                 <div className="w-full flex justify-center">
                   {!isMobile ? (
                     <div className="scale-[1.1] origin-top transition-transform">
@@ -550,29 +535,37 @@ const Portfolio = () => {
                       />
                     </div>
                   ) : (
-                    <div className="w-full mb-16 [&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
-                      <GitHubCalendar
-                        username="chvlpont"
-                        colorScheme={theme}
-                        blockSize={8}
-                        fontSize={8}
-                        theme={{
-                          light: [
-                            "#ebedf0",
-                            "#9be9a8",
-                            "#40c463",
-                            "#30a14e",
-                            "#216e39",
-                          ],
-                          dark: [
-                            "#161b22",
-                            "#0e4429",
-                            "#006d32",
-                            "#26a641",
-                            "#39d353",
-                          ],
-                        }}
-                      />
+                    <div className="w-full mb-16 border border-border rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Github size={18} className="text-accent-primary" />
+                        <span className="text-sm font-medium">
+                          GitHub Activity
+                        </span>
+                      </div>
+                      <div className="[&>article]:!w-full [&_svg]:!w-full [&_svg]:!h-auto">
+                        <GitHubCalendar
+                          username="chvlpont"
+                          colorScheme={theme}
+                          blockSize={8}
+                          fontSize={8}
+                          theme={{
+                            light: [
+                              "#ebedf0",
+                              "#9be9a8",
+                              "#40c463",
+                              "#30a14e",
+                              "#216e39",
+                            ],
+                            dark: [
+                              "#161b22",
+                              "#0e4429",
+                              "#006d32",
+                              "#26a641",
+                              "#39d353",
+                            ],
+                          }}
+                        />
+                      </div>
                     </div>
                   )}
                 </div>
