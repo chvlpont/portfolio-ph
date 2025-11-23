@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { Github, Mail, FileText } from "lucide-react";
+import {
+  Github,
+  Mail,
+  FileText,
+  Calendar,
+  ShoppingCart,
+  MessageSquare,
+} from "lucide-react";
 import {
   SiHtml5,
   SiCss3,
@@ -195,6 +202,58 @@ const Portfolio = () => {
         { label: "HTML", color: "#f97316" },
         { label: "CSS", color: "#3b82f6" },
         { label: "WordPress", color: "#6366f1" },
+      ],
+    },
+  ];
+
+  const schoolProjects = [
+    {
+      name: "Eventify",
+      url: "https://github.com/chvlpont/eventify",
+      description:
+        "Event management system built with React/Next.js/Tailwind. Leverages an API created in a group project.",
+      icon: Calendar,
+      iconColor: "from-purple-500/20 to-pink-500/20",
+      tags: [
+        { label: "React", color: "#06b6d4" },
+        { label: "Next.js", color: "#6b7280" },
+        { label: "JavaScript", color: "#eab308" },
+        { label: "Tailwind", color: "#06b6d4" },
+        { label: "Clerk", color: "#a855f7" },
+        { label: "Firebase", color: "#f59e0b" },
+      ],
+    },
+    {
+      name: "Byte",
+      url: "https://github.com/chvlpont/byte-fullstack",
+      description:
+        "Full-stack e-commerce website built with React + Vite, Redux, and CSS. Interacts with Node.js/Express.js server and MongoDB.",
+      icon: ShoppingCart,
+      iconColor: "from-green-500/20 to-emerald-500/20",
+      tags: [
+        { label: "React", color: "#06b6d4" },
+        { label: "Vite", color: "#a855f7" },
+        { label: "JavaScript", color: "#eab308" },
+        { label: "Redux", color: "#9333ea" },
+        { label: "MongoDB", color: "#16a34a" },
+        { label: "Express", color: "#9ca3af" },
+        { label: "Node.js", color: "#22c55e" },
+        { label: "CSS", color: "#3b82f6" },
+      ],
+    },
+    {
+      name: "WebTalk",
+      url: "https://github.com/chvlpont/webtalk-forum2.0",
+      description:
+        "Reddit-type forum built with Next.js, TypeScript, and Tailwind. Uses LocalStorage and Context for state management.",
+      icon: MessageSquare,
+      iconColor: "from-orange-500/20 to-red-500/20",
+      tags: [
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Tailwind", color: "#06b6d4" },
+        { label: "LocalStorage", color: "#eab308" },
+        { label: "Context", color: "#06b6d4" },
       ],
     },
   ];
@@ -645,6 +704,66 @@ const Portfolio = () => {
                           : "text-lg font-bold transition-colors mb-2"
                       }
                     >
+                      {project.name}
+                    </h3>
+
+                    <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag.label}
+                          className="px-2 py-1 rounded text-xs"
+                          style={{
+                            backgroundColor: `${tag.color}1A`,
+                            color: tag.color,
+                            border: `1px solid ${tag.color}33`,
+                          }}
+                        >
+                          {tag.label}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          {/* School Projects Section */}
+          <section className="mt-24">
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              School Projects
+            </h2>
+            <p className="text-xl text-text-secondary mb-12 text-center">
+              Projects built during my studies
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {schoolProjects.map((project) => (
+                <a
+                  key={project.name}
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group relative overflow-hidden rounded-xl bg-bg-surface border border-border hover:border-accent-primary hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full"
+                >
+                  {/* Icon Header */}
+                  <div
+                    className={`relative w-full aspect-16/10 overflow-hidden bg-gradient-to-br ${project.iconColor} flex items-center justify-center`}
+                  >
+                    <project.icon
+                      size={80}
+                      className="text-accent-primary opacity-80 group-hover:scale-110 transition-transform duration-300"
+                      strokeWidth={1.5}
+                    />
+                  </div>
+
+                  {/* Project Info */}
+                  <div className="p-5 flex flex-col">
+                    <h3 className="text-lg font-bold group-hover:text-accent-primary transition-colors mb-2">
                       {project.name}
                     </h3>
 
