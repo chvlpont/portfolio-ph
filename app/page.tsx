@@ -381,6 +381,7 @@ const Portfolio = () => {
     { name: "Tailwind", icon: SiTailwindcss, color: "#22d3ee" },
     { name: "MongoDB", icon: SiMongodb, color: "#16a34a" },
     { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+    { name: "Substance Painter", icon: SiAdobecreativecloud, color: "#ff6f00" },
     { name: "Redux", icon: SiRedux, color: "#9333ea" },
     { name: "Express", icon: SiExpress, color: "#9ca3af" },
     { name: "Framer Motion", icon: SiFramer, color: "#ec4899" },
@@ -397,7 +398,6 @@ const Portfolio = () => {
     { name: "Prisma", icon: SiPrisma, color: "#5a67d8" },
     { name: "Redis", icon: SiUpstash, color: "#00e9a3" },
     { name: "Vite", icon: SiVite, color: "#646cff" },
-    { name: "Substance Painter", icon: SiAdobecreativecloud, color: "#ff6f00" },
     { name: "Canva", icon: SiCanva, color: "#00c4cc" },
   ];
 
@@ -801,7 +801,7 @@ const Portfolio = () => {
                       <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
                         <skill.icon style={{ color: skill.color }} />
                       </div>
-                      <span className="text-sm font-semibold transition-colors">
+                      <span className="text-sm font-semibold transition-colors text-center whitespace-nowrap">
                         {skill.name}
                       </span>
 
