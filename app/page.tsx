@@ -462,8 +462,7 @@ const Portfolio = () => {
                   <div className="flex items-center justify-center gap-4 flex-wrap">
                     <a
                       href="#projects"
-                      style={{ backgroundColor: "rgba(50, 205, 48, 0.6)" }}
-                      className="px-6 py-3 hover:bg-opacity-90 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                      className="px-6 py-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 text-text-primary font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
                     >
                       View Projects
                     </a>
