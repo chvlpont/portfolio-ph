@@ -510,29 +510,37 @@ const Portfolio = () => {
               <div className="w-full max-w-5xl">
                 <div className="w-full flex justify-center">
                   {!isMobile ? (
-                    <div className="scale-[1.1] origin-top transition-transform">
-                      <GitHubCalendar
-                        username="chvlpont"
-                        colorScheme={theme}
-                        blockSize={14}
-                        fontSize={12}
-                        theme={{
-                          light: [
-                            "#ebedf0",
-                            "#9be9a8",
-                            "#40c463",
-                            "#30a14e",
-                            "#216e39",
-                          ],
-                          dark: [
-                            "#161b22",
-                            "#0e4429",
-                            "#006d32",
-                            "#26a641",
-                            "#39d353",
-                          ],
-                        }}
-                      />
+                    <div className="border border-border rounded-xl p-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <Github size={20} className="text-accent-primary" />
+                        <span className="text-base font-medium">
+                          GitHub Activity
+                        </span>
+                      </div>
+                      <div className="scale-[1] origin-top transition-transform">
+                        <GitHubCalendar
+                          username="chvlpont"
+                          colorScheme={theme}
+                          blockSize={14}
+                          fontSize={12}
+                          theme={{
+                            light: [
+                              "#ebedf0",
+                              "#9be9a8",
+                              "#40c463",
+                              "#30a14e",
+                              "#216e39",
+                            ],
+                            dark: [
+                              "#161b22",
+                              "#0e4429",
+                              "#006d32",
+                              "#26a641",
+                              "#39d353",
+                            ],
+                          }}
+                        />
+                      </div>
                     </div>
                   ) : (
                     <div className="w-full mb-16 border border-border rounded-xl p-4">
