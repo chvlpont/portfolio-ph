@@ -214,6 +214,7 @@ const Portfolio = () => {
         "Event management system built with React/Next.js/Tailwind. Leverages an API created in a group project.",
       icon: Calendar,
       iconColor: "from-purple-500/20 to-pink-500/20",
+      iconColorLight: "#a855f7",
       tags: [
         { label: "React", color: "#06b6d4" },
         { label: "Next.js", color: "#6b7280" },
@@ -230,6 +231,7 @@ const Portfolio = () => {
         "Full-stack e-commerce website built with React + Vite, Redux, and CSS. Interacts with Node.js/Express.js server and MongoDB.",
       icon: ShoppingCart,
       iconColor: "from-green-500/20 to-emerald-500/20",
+      iconColorLight: "#22c55e",
       tags: [
         { label: "React", color: "#06b6d4" },
         { label: "Vite", color: "#a855f7" },
@@ -248,6 +250,7 @@ const Portfolio = () => {
         "Reddit-type forum built with Next.js, TypeScript, and Tailwind. Uses LocalStorage and Context for state management.",
       icon: MessageSquare,
       iconColor: "from-orange-500/20 to-red-500/20",
+      iconColorLight: "#f97316",
       tags: [
         { label: "Next.js", color: "#6b7280" },
         { label: "TypeScript", color: "#3b82f6" },
@@ -656,11 +659,28 @@ const Portfolio = () => {
                 >
                   {/* Icon Header */}
                   <div
-                    className={`relative w-full aspect-16/10 overflow-hidden bg-gradient-to-br ${project.iconColor} flex items-center justify-center`}
+                    className="relative w-full aspect-16/10 overflow-hidden flex items-center justify-center"
+                    style={{
+                      background:
+                        theme === "light"
+                          ? "linear-gradient(to bottom right, #f1f5f9, #e2e8f0)"
+                          : undefined,
+                    }}
                   >
+                    {theme === "dark" && (
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-br ${project.iconColor}`}
+                      ></div>
+                    )}
                     <project.icon
-                      size={80}
-                      className="text-accent-primary opacity-80"
+                      size={100}
+                      className="opacity-80 relative z-10"
+                      style={{
+                        color:
+                          theme === "light"
+                            ? project.iconColorLight
+                            : "var(--accent-primary)",
+                      }}
                       strokeWidth={1.5}
                     />
                   </div>
