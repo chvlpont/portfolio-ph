@@ -290,7 +290,6 @@ const Portfolio = () => {
         { label: "Tailwind", color: "#06b6d4" },
         { label: "OpenAI", color: "#10a37f" },
         { label: "Redis", color: "#dc2626" },
-        { label: "AI", color: "#a855f7" },
       ],
     },
     {
