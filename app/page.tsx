@@ -713,22 +713,32 @@ const Portfolio = () => {
                   }}
                 >
                   {/* Card content */}
-                  <div className="relative rounded-xl p-5 bg-bg-surface border border-border hover:border-accent-primary transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden">
-                    {/* Subtle background gradient */}
-                    <div
-                      className="absolute inset-0 pointer-events-none"
-                      style={{
-                        background: `linear-gradient(135deg, ${skill.color}0D, transparent, ${skill.color}05)`,
-                      }}
-                    ></div>
+                  <div
+                    className="relative rounded-xl p-5 border border-border hover:border-accent-primary transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden"
+                    style={{
+                      backgroundColor:
+                        theme === "light" ? "transparent" : "var(--bg-surface)",
+                    }}
+                  >
+                    {/* Subtle background gradient - only in dark mode */}
+                    {theme === "dark" && (
+                      <div
+                        className="absolute inset-0 pointer-events-none"
+                        style={{
+                          background: `linear-gradient(135deg, ${skill.color}0D, transparent, ${skill.color}05)`,
+                        }}
+                      ></div>
+                    )}
 
-                    {/* Glow effect - always visible, intensifies on hover */}
-                    <div
-                      className="absolute inset-0 rounded-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 blur-xl pointer-events-none"
-                      style={{
-                        background: `radial-gradient(circle at center, ${skill.color}66, transparent)`,
-                      }}
-                    ></div>
+                    {/* Glow effect - only in dark mode */}
+                    {theme === "dark" && (
+                      <div
+                        className="absolute inset-0 rounded-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 blur-xl pointer-events-none"
+                        style={{
+                          background: `radial-gradient(circle at center, ${skill.color}66, transparent)`,
+                        }}
+                      ></div>
+                    )}
 
                     <div className="relative flex flex-col items-center gap-3">
                       <div className="text-4xl transform group-hover:scale-110 transition-transform duration-300">
