@@ -304,8 +304,8 @@ const Portfolio = () => {
       responsibilities: [
         "Co-founded and built Webbyro alongside my brother and a friend",
         "Developed affordable websites for businesses using modern web technologies",
-        "Currently focusing on developing an AI product",
         "Full-stack development with Next.js, TypeScript, and Supabase",
+        "Currently focusing on developing an AI product (Imageidentifier.ai)",
       ],
       tags: [
         { label: "Next.js", color: "#6b7280" },
