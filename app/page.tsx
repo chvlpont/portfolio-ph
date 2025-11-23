@@ -269,6 +269,30 @@ const Portfolio = () => {
 
   const experiences = [
     {
+      title: "Founder & Frontend Developer",
+      company: "Image Identifier",
+      period: "May 2025 - Present",
+      gradient: {
+        from: "orange-500",
+        to: "purple-500",
+      },
+      url: "https://imageidentifier.ai/",
+      responsibilities: [
+        "Built AI-powered image identification platform trusted by 278,000+ users",
+        "Achieved 4.8/5 star rating with instant, accurate object recognition",
+        "Implemented privacy-first architecture with no data storage or sharing",
+        "Developed fast, user-friendly interface supporting JPG, PNG, WEBP, and HEIC formats",
+      ],
+      tags: [
+        { label: "Next.js", color: "#6b7280" },
+        { label: "TypeScript", color: "#3b82f6" },
+        { label: "Tailwind", color: "#06b6d4" },
+        { label: "OpenAI", color: "#10a37f" },
+        { label: "Redis", color: "#dc2626" },
+        { label: "AI", color: "#a855f7" },
+      ],
+    },
+    {
       title: "Co-Founder & Fullstack Developer",
       company: "Webbyro",
       period: "Aug 2024 - Present",
