@@ -413,7 +413,12 @@ const Portfolio = () => {
               <div className="flex flex-col md:flex-row items-center justify-center w-full gap-33 max-w-5xl mx-auto">
                 {/* Right side - Profile Image (mobile first) */}
                 <div className="flex justify-center order-1 md:order-2 mt-16 md:mt-0">
-                  <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-8 border-border overflow-hidden">
+                  <div
+                    className="w-64 h-64 md:w-80 md:h-80 border-8 border-border overflow-hidden animate-blob"
+                    style={{
+                      borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+                    }}
+                  >
                     <img
                       src="https://media.licdn.com/dms/image/v2/D4D03AQGMiTPLTp2Yog/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709338866147?e=1764806400&v=beta&t=NGiGgY3l82efPdeFOftUqvtNNTU2WEH5RS6ZlTGdppc"
                       alt="Profile"
