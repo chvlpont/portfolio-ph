@@ -975,7 +975,7 @@ const Portfolio = () => {
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 text-text-primary font-semibold rounded-lg transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2"
                   >
                     <Mail size={20} />
                     Send Message
@@ -989,7 +989,7 @@ const Portfolio = () => {
         {/* Footer */}
         <footer className="border-t border-border mt-24">
           <div className="max-w-7xl mx-auto px-6 py-8 text-center text-text-secondary">
-            <p>© 2025 Your Name. All rights reserved.</p>
+            <p>© 2025 PH</p>
           </div>
         </footer>
       </div>
