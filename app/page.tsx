@@ -33,6 +33,12 @@ import {
   SiSupabase,
   SiSignal,
   SiPostgresql,
+  SiPrisma,
+  SiRedis,
+  SiVite,
+  SiAdobecreativecloud,
+  SiCanva,
+  SiUpstash,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { TypeAnimation } from "react-type-animation";
@@ -363,6 +369,11 @@ const Portfolio = () => {
     { name: "WebSockets", icon: SiSignal, color: "#a855f7" },
     { name: "Clerk", icon: SiAuth0, color: "#6366f1" },
     { name: "Context", icon: SiReact, color: "#14b8a6" },
+    { name: "Prisma", icon: SiPrisma, color: "#5a67d8" },
+    { name: "Redis", icon: SiUpstash, color: "#00e9a3" },
+    { name: "Vite", icon: SiVite, color: "#646cff" },
+    { name: "Substance Painter", icon: SiAdobecreativecloud, color: "#ff6f00" },
+    { name: "Canva", icon: SiCanva, color: "#00c4cc" },
   ];
 
   return (
@@ -766,6 +777,77 @@ const Portfolio = () => {
                         <skill.icon style={{ color: skill.color }} />
                       </div>
                       <span className="text-sm font-semibold transition-colors">
+                        {skill.name}
+                      </span>
+
+                      {/* Animated underline */}
+                      <div
+                        className="h-0.5 w-0 group-hover:w-full transition-all duration-300"
+                        style={{
+                          background: `linear-gradient(to right, transparent, ${skill.color}, transparent)`,
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Core Skills Section */}
+          <section className="mt-24">
+            <h2 className="text-3xl font-bold mb-8 text-center">Core Skills</h2>
+            <p className="text-xl text-text-secondary mb-12 text-center">
+              My primary tech stack
+            </p>
+
+            <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+              {[
+                { name: "React", icon: SiReact, color: "#06b6d4" },
+                { name: "TypeScript", icon: SiTypescript, color: "#60a5fa" },
+                { name: "JavaScript", icon: SiJavascript, color: "#eab308" },
+                { name: "Next.js", icon: SiNextdotjs, color: "#6b7280" },
+                { name: "Tailwind", icon: SiTailwindcss, color: "#22d3ee" },
+              ].map((skill, index) => (
+                <div
+                  key={skill.name}
+                  className="group relative"
+                  style={{
+                    animationDelay: `${index * 0.05}s`,
+                  }}
+                >
+                  <div
+                    className="relative rounded-xl p-8 border border-border hover:border-accent-primary transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-xl overflow-hidden"
+                    style={{
+                      backgroundColor:
+                        theme === "light" ? "transparent" : "var(--bg-surface)",
+                    }}
+                  >
+                    {/* Subtle background gradient - only in dark mode */}
+                    {theme === "dark" && (
+                      <div
+                        className="absolute inset-0 pointer-events-none"
+                        style={{
+                          background: `linear-gradient(135deg, ${skill.color}0D, transparent, ${skill.color}05)`,
+                        }}
+                      ></div>
+                    )}
+
+                    {/* Glow effect - only in dark mode */}
+                    {theme === "dark" && (
+                      <div
+                        className="absolute inset-0 rounded-xl opacity-60 group-hover:opacity-100 transition-opacity duration-300 blur-xl pointer-events-none"
+                        style={{
+                          background: `radial-gradient(circle at center, ${skill.color}66, transparent)`,
+                        }}
+                      ></div>
+                    )}
+
+                    <div className="relative flex flex-col items-center gap-4">
+                      <div className="text-5xl transform group-hover:scale-110 transition-transform duration-300">
+                        <skill.icon style={{ color: skill.color }} />
+                      </div>
+                      <span className="text-base font-semibold transition-colors">
                         {skill.name}
                       </span>
 
