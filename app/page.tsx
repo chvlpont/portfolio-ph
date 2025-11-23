@@ -826,13 +826,14 @@ const Portfolio = () => {
               My primary tech stack
             </p>
 
-            <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
                 { name: "React", icon: SiReact, color: "#06b6d4" },
+                { name: "Next.js", icon: SiNextdotjs, color: "#6b7280" },
                 { name: "TypeScript", icon: SiTypescript, color: "#60a5fa" },
                 { name: "JavaScript", icon: SiJavascript, color: "#eab308" },
-                { name: "Next.js", icon: SiNextdotjs, color: "#6b7280" },
                 { name: "Tailwind", icon: SiTailwindcss, color: "#22d3ee" },
+                { name: "Git", icon: SiGit, color: "#ea580c" },
               ].map((skill, index) => (
                 <div
                   key={skill.name}
@@ -872,7 +873,7 @@ const Portfolio = () => {
                       <div className="text-5xl transform group-hover:scale-110 transition-transform duration-300">
                         <skill.icon style={{ color: skill.color }} />
                       </div>
-                      <span className="text-base font-semibold transition-colors">
+                      <span className="text-sm font-semibold transition-colors">
                         {skill.name}
                       </span>
 
