@@ -268,7 +268,6 @@ const Portfolio = () => {
         from: "cyan-500",
         to: "blue-500",
       },
-      accentColor: "cyan-400",
       responsibilities: [
         "Co-founded and built Webbyro alongside my brother and a friend",
         "Developed affordable websites for businesses using modern web technologies",
@@ -295,7 +294,6 @@ const Portfolio = () => {
         from: "purple-500",
         to: "pink-500",
       },
-      accentColor: "purple-400",
       url: "https://knowingly.ai/",
       responsibilities: [
         "Enhanced AI-powered community platform to improve user connections",
@@ -320,7 +318,6 @@ const Portfolio = () => {
         from: "green-500",
         to: "blue-500",
       },
-      accentColor: "green-400",
       url: "https://www.vobling.com/",
       responsibilities: [
         "Developed VR Fire Trainer, a VR fire safety simulation application",
@@ -871,34 +868,14 @@ const Portfolio = () => {
                       <div className="relative p-8 md:p-10">
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                           <div>
-                            <h3
-                              className={
-                                experience.accentColor === "cyan-400"
-                                  ? "text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors"
-                                  : experience.accentColor === "purple-400"
-                                  ? "text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors"
-                                  : experience.accentColor === "green-400"
-                                  ? "text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors"
-                                  : "text-2xl md:text-3xl font-bold transition-colors"
-                              }
-                            >
+                            <h3 className="text-2xl md:text-3xl font-bold transition-colors">
                               {experience.title}
                             </h3>
                             <p className="text-text-secondary text-lg mt-1">
                               {experience.company}
                             </p>
                           </div>
-                          <div
-                            className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace(
-                              "-400",
-                              "-500"
-                            )}/10 text-${
-                              experience.accentColor
-                            } border border-${experience.accentColor.replace(
-                              "-400",
-                              "-500"
-                            )}/20 rounded-lg text-sm font-medium`}
-                          >
+                          <div className="mt-2 md:mt-0 px-4 py-2 bg-bg-surface text-text-secondary border border-border rounded-lg text-sm font-medium">
                             {experience.period}
                           </div>
                         </div>
@@ -910,17 +887,7 @@ const Portfolio = () => {
                                 key={index}
                                 className="flex items-start gap-2"
                               >
-                                <span
-                                  className={
-                                    experience.accentColor === "cyan-400"
-                                      ? "text-cyan-400 mt-1"
-                                      : experience.accentColor === "purple-400"
-                                      ? "text-purple-400 mt-1"
-                                      : experience.accentColor === "green-400"
-                                      ? "text-green-400 mt-1"
-                                      : "mt-1"
-                                  }
-                                >
+                                <span className="text-accent-primary mt-1">
                                   ▹
                                 </span>
                                 <span>{responsibility}</span>
@@ -951,34 +918,14 @@ const Portfolio = () => {
                       <div className="relative p-8 md:p-10">
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                           <div>
-                            <h3
-                              className={
-                                experience.accentColor === "cyan-400"
-                                  ? "text-2xl md:text-3xl font-bold group-hover:text-cyan-400 transition-colors"
-                                  : experience.accentColor === "purple-400"
-                                  ? "text-2xl md:text-3xl font-bold group-hover:text-purple-400 transition-colors"
-                                  : experience.accentColor === "green-400"
-                                  ? "text-2xl md:text-3xl font-bold group-hover:text-green-400 transition-colors"
-                                  : "text-2xl md:text-3xl font-bold transition-colors"
-                              }
-                            >
+                            <h3 className="text-2xl md:text-3xl font-bold transition-colors">
                               {experience.title}
                             </h3>
                             <p className="text-text-secondary text-lg mt-1">
                               {experience.company}
                             </p>
                           </div>
-                          <div
-                            className={`mt-2 md:mt-0 px-4 py-2 bg-${experience.accentColor.replace(
-                              "-400",
-                              "-500"
-                            )}/10 text-${
-                              experience.accentColor
-                            } border border-${experience.accentColor.replace(
-                              "-400",
-                              "-500"
-                            )}/20 rounded-lg text-sm font-medium`}
-                          >
+                          <div className="mt-2 md:mt-0 px-4 py-2 bg-bg-surface text-text-secondary border border-border rounded-lg text-sm font-medium">
                             {experience.period}
                           </div>
                         </div>
@@ -990,17 +937,7 @@ const Portfolio = () => {
                                 key={index}
                                 className="flex items-start gap-2"
                               >
-                                <span
-                                  className={
-                                    experience.accentColor === "cyan-400"
-                                      ? "text-cyan-400 mt-1"
-                                      : experience.accentColor === "purple-400"
-                                      ? "text-purple-400 mt-1"
-                                      : experience.accentColor === "green-400"
-                                      ? "text-green-400 mt-1"
-                                      : "mt-1"
-                                  }
-                                >
+                                <span className="text-accent-primary mt-1">
                                   ▹
                                 </span>
                                 <span>{responsibility}</span>
