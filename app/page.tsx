@@ -507,7 +507,7 @@ const Portfolio = () => {
               </div>
 
               {/* Bottom Row - GitHub Activity */}
-              <div className="w-full max-w-5xl">
+              {/* <div className="w-full max-w-5xl">
                 <div className="w-full flex justify-center">
                   {!isMobile ? (
                     <div className="border border-border rounded-xl p-6">
@@ -577,7 +577,7 @@ const Portfolio = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
 
