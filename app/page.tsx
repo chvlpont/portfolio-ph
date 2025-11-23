@@ -282,7 +282,7 @@ const Portfolio = () => {
         "AI analyzes visual features and compares with thousands of patterns in real-time",
         "Implemented privacy-first architecture with no data storage or sharing",
         "Delivers accurate identification instantly with confidence scores and related information",
-        "Built alongside my brother and a friend",
+        "Co-founded and built alongside my brother and a friend",
       ],
       tags: [
         { label: "Next.js", color: "#6b7280" },
@@ -302,10 +302,10 @@ const Portfolio = () => {
         to: "blue-500",
       },
       responsibilities: [
-        "Co-founded and built Webbyro alongside my brother and a friend",
         "Developed affordable websites for businesses using modern web technologies",
         "Full-stack development with Next.js, TypeScript, and Supabase",
         "Currently focusing on developing an AI product (Imageidentifier.ai)",
+        "Co-founded and built Webbyro alongside my brother and a friend",
       ],
       tags: [
         { label: "Next.js", color: "#6b7280" },
