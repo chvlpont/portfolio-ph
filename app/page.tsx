@@ -419,7 +419,7 @@ const Portfolio = () => {
               <StockholmClock />
               <div className="flex items-center gap-6">
                 <a
-                  href="/resume.pdf"
+                  href="/CV%20Pontus%20Hogler%20ENG%20-%20Fullstack.pdf"
                   className="hover:text-text-secondary transition-colors flex items-center gap-2"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -529,7 +529,7 @@ const Portfolio = () => {
                       <Github size={20} className="md:w-6 md:h-6" />
                     </a>
                     <a
-                      href="/resume.pdf"
+                      href="/CV%20Pontus%20Hogler%20ENG%20-%20Fullstack.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 md:p-3 bg-bg-surface hover:bg-bg-muted border border-border hover:border-accent-green/50 rounded-lg transition-all duration-300 hover:scale-110"
