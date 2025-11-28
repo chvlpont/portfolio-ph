@@ -35,28 +35,6 @@ export interface SchoolProject {
 
 export const projects: Project[] = [
   {
-    name: "FlowAI",
-    url: "https://flowai-inky.vercel.app/",
-    image: "/flowai-screenshot.png",
-    description:
-      "AI-powered whiteboard collaboration tool for real-time brainstorming and visual thinking.",
-    gradient: {
-      from: "indigo-500",
-      to: "cyan-500",
-    },
-    hoverColor: "indigo-400",
-    tags: [
-      { label: "Next.js", color: "#6b7280" },
-      { label: "TypeScript", color: "#3b82f6" },
-      { label: "Supabase", color: "#22c55e" },
-      { label: "PostgreSQL", color: "#3b82f6" },
-      { label: "Tailwind", color: "#06b6d4" },
-      { label: "WebSockets", color: "#a855f7" },
-      { label: "DnD", color: "#8b5cf6" },
-      { label: "Groq", color: "#f97316" },
-    ],
-  },
-  {
     name: "Kanbai",
     url: "https://kanbai-web.vercel.app/",
     image: "/kanbai-screenshot.png",
@@ -80,24 +58,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "TypeSprint",
-    url: "https://typesprint-web.vercel.app/",
-    image: "/typesprint-screenshot.png",
-    description:
-      "Real-time multiplayer typing game with solo practice mode, powered by WebSockets.",
-    gradient: {
-      from: "green-500",
-      to: "emerald-500",
-    },
-    tags: [
-      { label: "Next.js", color: "#6b7280" },
-      { label: "TypeScript", color: "#3b82f6" },
-      { label: "Supabase", color: "#22c55e" },
-      { label: "PostgreSQL", color: "#3b82f6" },
-      { label: "WebSockets", color: "#a855f7" },
-    ],
-  },
-  {
     name: "Imageidentifier",
     url: "https://imageidentifier.ai",
     image: "/imageidentifier-screenshot.png",
@@ -113,6 +73,46 @@ export const projects: Project[] = [
       { label: "Tailwind", color: "#06b6d4" },
       { label: "Redis", color: "#ef4444" },
       { label: "OpenAI", color: "#10a37f" },
+    ],
+  },
+  {
+    name: "FlowAI",
+    url: "https://flowai-inky.vercel.app/",
+    image: "/flowai-screenshot.png",
+    description:
+      "AI-powered whiteboard collaboration tool for real-time brainstorming and visual thinking.",
+    gradient: {
+      from: "indigo-500",
+      to: "cyan-500",
+    },
+    hoverColor: "indigo-400",
+    tags: [
+      { label: "Next.js", color: "#6b7280" },
+      { label: "TypeScript", color: "#3b82f6" },
+      { label: "Supabase", color: "#22c55e" },
+      { label: "PostgreSQL", color: "#3b82f6" },
+      { label: "Tailwind", color: "#06b6d4" },
+      { label: "WebSockets", color: "#a855f7" },
+      { label: "DnD", color: "#8b5cf6" },
+      { label: "Groq", color: "#f97316" },
+    ],
+  },
+  {
+    name: "TypeSprint",
+    url: "https://typesprint-web.vercel.app/",
+    image: "/typesprint-screenshot.png",
+    description:
+      "Real-time multiplayer typing game with solo practice mode, powered by WebSockets.",
+    gradient: {
+      from: "green-500",
+      to: "emerald-500",
+    },
+    tags: [
+      { label: "Next.js", color: "#6b7280" },
+      { label: "TypeScript", color: "#3b82f6" },
+      { label: "Supabase", color: "#22c55e" },
+      { label: "PostgreSQL", color: "#3b82f6" },
+      { label: "WebSockets", color: "#a855f7" },
     ],
   },
   {
