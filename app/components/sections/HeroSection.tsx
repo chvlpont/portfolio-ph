@@ -19,7 +19,7 @@ export const HeroSection: React.FC = () => {
               }}
             >
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D03AQGMiTPLTp2Yog/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709338866147?e=1764806400&v=beta&t=NGiGgY3l82efPdeFOftUqvtNNTU2WEH5RS6ZlTGdppc"
+                src="/bild.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
