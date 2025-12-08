@@ -30,6 +30,7 @@ import {
   SiAdobecreativecloud,
   SiCanva,
   SiUpstash,
+  SiJest,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -69,6 +70,7 @@ export const skills: Skill[] = [
   { name: "Prisma", icon: SiPrisma, color: "#5a67d8" },
   { name: "Redis", icon: SiUpstash, color: "#00e9a3" },
   { name: "Vite", icon: SiVite, color: "#646cff" },
+  { name: "Jest", icon: SiJest, color: "#C21325" },
   { name: "Canva", icon: SiCanva, color: "#00c4cc" },
   { name: "Zustand", icon: ZustandIcon, color: "#ff9100" },
 ];
