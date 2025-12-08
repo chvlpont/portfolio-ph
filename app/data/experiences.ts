@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
   {
     title: "Co-Founder & Frontend Developer",
     company: "Image Identifier",
-    period: "May 2025 - Present",
+    period: "Mar 2025 - Present",
     gradient: {
       from: "orange-500",
       to: "purple-500",
@@ -28,7 +28,6 @@ export const experiences: Experience[] = [
       "AI analyzes visual features and compares with thousands of patterns in real-time",
       "Implemented privacy-first architecture with no data storage or sharing",
       "Delivers accurate identification instantly with confidence scores and related information",
-      "Co-founded and built alongside my brother and a friend",
     ],
     tags: [
       { label: "Next.js", color: "#6b7280" },
@@ -41,7 +40,7 @@ export const experiences: Experience[] = [
   {
     title: "Co-Founder & Fullstack Developer",
     company: "Webbyro",
-    period: "Aug 2024 - Present",
+    period: "Aug 2024 - Mar 2025",
     gradient: {
       from: "cyan-500",
       to: "blue-500",
@@ -49,8 +48,8 @@ export const experiences: Experience[] = [
     responsibilities: [
       "Developed affordable websites for businesses using modern web technologies",
       "Full-stack development with Next.js, TypeScript, and Supabase",
+      "Collaborated with clients to gather requirements and ensure project success",
       "Currently focusing on developing an AI product (Imageidentifier.ai)",
-      "Co-founded and built Webbyro alongside my brother and a friend",
     ],
     tags: [
       { label: "Next.js", color: "#6b7280" },
