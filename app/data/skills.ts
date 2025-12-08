@@ -1,4 +1,5 @@
 import { IconType } from "react-icons";
+import { ZustandIcon } from "../components/ZustandIcon";
 import {
   SiHtml5,
   SiCss3,
@@ -69,6 +70,7 @@ export const skills: Skill[] = [
   { name: "Redis", icon: SiUpstash, color: "#00e9a3" },
   { name: "Vite", icon: SiVite, color: "#646cff" },
   { name: "Canva", icon: SiCanva, color: "#00c4cc" },
+  { name: "Zustand", icon: ZustandIcon, color: "#ff9100" },
 ];
 
 export const coreSkills: Skill[] = [
