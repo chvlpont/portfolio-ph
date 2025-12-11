@@ -161,7 +161,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "AquaFix",
+    name: "Aquafix",
     url: "https://aquafix.se",
     image: "/aquafix-screenshot.png",
     description:
