@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Mail } from "lucide-react";
+import toast, { Toaster } from "react-hot-toast";
 
 export const ContactSection: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -9,34 +10,37 @@ export const ContactSection: React.FC = () => {
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
-
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+        body: formData,
       });
 
-      if (response.ok) {
-        alert("Message sent successfully! I'll get back to you soon.");
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Message sent successfully! I'll get back to you soon.", {
+          duration: 4000,
+          position: "top-center",
+        });
         form.reset();
       } else {
-        alert("Failed to send message. Please try again.");
+        toast.error("Failed to send message. Please try again.", {
+          duration: 4000,
+          position: "top-center",
+        });
       }
     } catch (error) {
-      alert("Failed to send message. Please try again.");
+      toast.error("Failed to send message. Please try again.", {
+        duration: 4000,
+        position: "top-center",
+      });
     }
   };
 
   return (
     <section id="contact" className="mt-24">
+      <Toaster />
       <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
       <p className="text-xl text-text-secondary mb-12 text-center">
         Have a question or want to work together?
@@ -48,6 +52,7 @@ export const ContactSection: React.FC = () => {
           <div className="absolute inset-0 bg-linear-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
 
           <form className="relative space-y-6" onSubmit={handleSubmit}>
+            <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY} />
             <div>
               <label
                 htmlFor="name"
