@@ -57,6 +57,8 @@ export const experiences: Experience[] = [
       { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "JavaScript", color: "#eab308" },
+      { label: "HTML", color: "#f97316" },
+      { label: "CSS", color: "#3b82f6" },
       { label: "Tailwind", color: "#06b6d4" },
       { label: "Supabase", color: "#22c55e" },
       { label: "PostgreSQL", color: "#3b82f6" },
