@@ -34,6 +34,27 @@ export interface SchoolProject {
 }
 
 export const projects: Project[] = [
+    {
+    name: "Coverforge",
+    url: "https://coverforgeai.vercel.app/",
+    image: "/coverforge-screenshot.png",
+    description: "AI-powered document editor with writing assistant and reference tracking.",
+    gradient: {
+      from: "emerald-500",
+      to: "blue-500",
+    },
+    hoverColor: "emerald-400",
+    tags: [
+      { label: "Next.js", color: "#6b7280" },
+      { label: "React", color: "#06b6d4" },
+      { label: "TypeScript", color: "#3b82f6" },
+      { label: "Supabase", color: "#22c55e" },
+      { label: "PostgreSQL", color: "#3b82f6" },
+      { label: "Zustand", color: "#ff9100" },
+      { label: "Tailwind", color: "#06b6d4" },
+      { label: "Groq", color: "#f97316" },
+    ],
+  },
   {
     name: "Kanbai",
     url: "https://kanbai-web.vercel.app/",
