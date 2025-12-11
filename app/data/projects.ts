@@ -21,6 +21,7 @@ export interface Project {
   };
   hoverColor?: string;
   tags: Tag[];
+  isRealCompany?: boolean;
 }
 
 export interface SchoolProject {
@@ -83,7 +84,7 @@ export const projects: Project[] = [
     name: "Imageidentifier",
     url: "https://imageidentifier.ai",
     image: "/imageidentifier-screenshot.png",
-    description: "AI-powered image identification and object recognition.",
+    description: "AI-powered image identification and object recognition used by 300k+ users.",
     gradient: {
       from: "cyan-500",
       to: "purple-500",
@@ -159,6 +160,7 @@ export const projects: Project[] = [
       { label: "Tailwind", color: "#06b6d4" },
       { label: "NextAuth", color: "#3b82f6" },
     ],
+    isRealCompany: true,
   },
   {
     name: "Aquafix",
@@ -176,6 +178,7 @@ export const projects: Project[] = [
       { label: "CSS", color: "#3b82f6" },
       { label: "WordPress", color: "#6366f1" },
     ],
+    isRealCompany: true,
   },
 ];
 

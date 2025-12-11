@@ -3,13 +3,14 @@
 import React from "react";
 import { Project, SchoolProject } from "../data/projects";
 import { TagList } from "./Tag";
+import { Briefcase } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
   theme?: "light" | "dark";
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project, theme }) => {
   return (
     <a
       href={project.url}
@@ -27,6 +28,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           alt={`${project.name} Screenshot`}
           className="absolute inset-0 w-full h-full object-cover"
         />
+        {/* Real Company Badge */}
+        {project.isRealCompany && (
+          <div className={`absolute top-3 right-3 flex items-center gap-1.5 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-medium shadow-sm ${
+            theme === 'dark'
+              ? 'bg-gray-800/95 text-gray-200 border border-gray-700'
+              : 'bg-white/95 text-gray-700 border border-gray-200'
+          }`}>
+            <Briefcase size={12} strokeWidth={2} />
+            <span>Real Company</span>
+          </div>
+        )}
       </div>
 
       {/* Project Info */}
