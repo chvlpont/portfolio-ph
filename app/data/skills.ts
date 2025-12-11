@@ -1,5 +1,6 @@
 import { IconType } from "react-icons";
 import { ZustandIcon } from "../components/ZustandIcon";
+import { VercelIcon } from "../components/VercelIcon";
 import {
   SiHtml5,
   SiCss3,
@@ -31,6 +32,9 @@ import {
   SiCanva,
   SiUpstash,
   SiJest,
+  SiRadixui,
+  SiShadcnui,
+  SiPostman,
 } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 
@@ -59,6 +63,7 @@ export const skills: Skill[] = [
   { name: "Framer Motion", icon: SiFramer, color: "#ec4899" },
   { name: "Blender", icon: SiBlender, color: "#fb923c" },
   { name: "Unity", icon: SiUnity, color: "#d1d5db" },
+  { name: "Vercel", icon: VercelIcon, color: "#000000" },
   { name: "WordPress", icon: SiWordpress, color: "#2563eb" },
   { name: "Figma", icon: SiFigma, color: "#ef4444" },
   { name: "SCSS", icon: SiSass, color: "#db2777" },
@@ -73,6 +78,9 @@ export const skills: Skill[] = [
   { name: "Jest", icon: SiJest, color: "#C21325" },
   { name: "Canva", icon: SiCanva, color: "#00c4cc" },
   { name: "Zustand", icon: ZustandIcon, color: "#ff9100" },
+  { name: "Radix UI", icon: SiRadixui, color: "#8b5cf6" },
+  { name: "Shadcn/ui", icon: SiShadcnui, color: "#000000" },
+  { name: "Postman", icon: SiPostman, color: "#FF6C37" },
 ];
 
 export const coreSkills: Skill[] = [

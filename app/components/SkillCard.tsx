@@ -72,7 +72,13 @@ export const SkillCard: React.FC<SkillCardProps> = ({
           <div
             className={`${iconSizes[size]} transform group-hover:scale-110 transition-transform duration-300`}
           >
-            <skill.icon style={{ color: skill.color }} />
+            <skill.icon
+              style={{
+                color: (skill.name === "Vercel" || skill.name === "Shadcn/ui" || skill.name === "Radix UI")
+                  ? (theme === "dark" ? "#FFFFFF" : "#000000")
+                  : skill.color
+              }}
+            />
           </div>
           <span className={`text-sm font-semibold transition-colors text-center ${size === "sm" ? "whitespace-nowrap" : ""}`}>
             {skill.name}
@@ -82,7 +88,11 @@ export const SkillCard: React.FC<SkillCardProps> = ({
           <div
             className="h-0.5 w-0 group-hover:w-full transition-all duration-300"
             style={{
-              background: `linear-gradient(to right, transparent, ${skill.color}, transparent)`,
+              background: `linear-gradient(to right, transparent, ${
+                (skill.name === "Vercel" || skill.name === "Shadcn/ui" || skill.name === "Radix UI")
+                  ? (theme === "dark" ? "#FFFFFF" : "#000000")
+                  : skill.color
+              }, transparent)`,
             }}
           ></div>
         </div>
