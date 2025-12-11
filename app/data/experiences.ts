@@ -24,7 +24,7 @@ export const experiences: Experience[] = [
     },
     url: "https://imageidentifier.ai/",
     responsibilities: [
-      "AI-powered image identification platform trusted by 278,000+ users",
+      "AI-powered image identification platform trusted by 300,000+ users",
       "AI analyzes visual features and compares with thousands of patterns in real-time",
       "Implemented privacy-first architecture with no data storage or sharing",
       "Delivers accurate identification instantly with confidence scores and related information",
