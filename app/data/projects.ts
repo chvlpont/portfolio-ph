@@ -45,8 +45,8 @@ export const projects: Project[] = [
     },
     hoverColor: "emerald-400",
     tags: [
-      { label: "Next.js", color: "#6b7280" },
       { label: "React", color: "#06b6d4" },
+      { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "Supabase", color: "#22c55e" },
       { label: "PostgreSQL", color: "#3b82f6" },
@@ -67,6 +67,7 @@ export const projects: Project[] = [
     },
     hoverColor: "blue-400",
     tags: [
+      { label: "React", color: "#06b6d4" },
       { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "Supabase", color: "#22c55e" },
@@ -89,6 +90,7 @@ export const projects: Project[] = [
     },
     hoverColor: "cyan-400",
     tags: [
+      { label: "React", color: "#06b6d4" },
       { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "Tailwind", color: "#06b6d4" },
@@ -108,6 +110,7 @@ export const projects: Project[] = [
     },
     hoverColor: "indigo-400",
     tags: [
+      { label: "React", color: "#06b6d4" },
       { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "Supabase", color: "#22c55e" },
@@ -129,6 +132,7 @@ export const projects: Project[] = [
       to: "emerald-500",
     },
     tags: [
+      { label: "React", color: "#06b6d4" },
       { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "Supabase", color: "#22c55e" },
@@ -148,6 +152,7 @@ export const projects: Project[] = [
     },
     hoverColor: "purple-400",
     tags: [
+      { label: "React", color: "#06b6d4" },
       { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "Supabase", color: "#22c55e" },
@@ -220,6 +225,7 @@ export const schoolProjects: SchoolProject[] = [
     iconColor: "from-orange-500/20 to-red-500/20",
     iconColorLight: "#f97316",
     tags: [
+      { label: "React", color: "#06b6d4" },
       { label: "Next.js", color: "#6b7280" },
       { label: "TypeScript", color: "#3b82f6" },
       { label: "Tailwind", color: "#06b6d4" },
